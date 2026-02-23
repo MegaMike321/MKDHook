@@ -1,7 +1,7 @@
 #pragma once
 #include "..\toc.h"
 
-#define DKP_FILES 37
+#define DKP_FILES 79
 
 extern struct mk_file_entry dkp_entry_table[DKP_FILES];
 extern struct mk_toc_entry dkp_file_table[DKP_FILES + 1];
