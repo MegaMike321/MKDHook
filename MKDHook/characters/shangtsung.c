@@ -87,7 +87,7 @@ struct mk_toc_entry shang_file_table[SHANG_FILES + 1] = {
 
 		{&shang_entry_table[1]	,0,	   505088 },	// shangtsung.sec        
 		{&shang_entry_table[2]	,0,    505600 },	// shangtsung_ap.sec     
-		{&shang_entry_table[3]	,0,    40224  },	// shangtsung.mko        
+		{&shang_entry_table[3]	,0,    40192  },	// shangtsung.mko    
 		{&shang_entry_table[4]	,0,    258304 },	// sh_shangtsung.sec     
 		{&shang_entry_table[5]	,0,    10164  },	// fight_fx.mko          
 		{&shang_entry_table[6]	,0,    21368  },	// blood_fx.mko          
@@ -140,7 +140,7 @@ struct mk_toc_entry shang_alt_file_table[SHANG_FILES + 1] = {
 
 		{&shang_alt_entry_table[1]	,0,	   465152 },	// shangtsung_alt.sec        
 		{&shang_alt_entry_table[2]	,0,    465152 },	// shangtsung_alt_ap.sec     
-		{&shang_alt_entry_table[3]	,0,    40224  },	// shangtsung.mko        
+		{&shang_alt_entry_table[3]	,0,    40192  },	// shangtsung.mko    
 		{&shang_alt_entry_table[4]	,0,    258304 },	// sh_shangtsung.sec     
 		{&shang_alt_entry_table[5]	,0,    10164  },	// fight_fx.mko          
 		{&shang_alt_entry_table[6]	,0,    21368  },	// blood_fx.mko          
@@ -270,7 +270,7 @@ float p_shangtsung_balls_proc()
 
 	p_shangtsung_update_ball(*ball_1, apdata, shang_balls_distance[plrID][0], shang_balls_distance[plrID][1]);
 	p_shangtsung_update_ball(*ball_2, apdata, shang_balls_distance[plrID][0], -shang_balls_distance[plrID][1]);
-	
+
 	return 1.0f;
 }
 
@@ -356,7 +356,7 @@ void start_shangtsung_balls(int plrID, int type)
 	if (!shangtsung_make_new_balls(plrID))
 		return;
 
-	
+
 	fx_reset(fx_by_owner("ball_l_trail", plrID + 1));
 	fx_reset(fx_by_owner("ball_r_trl", plrID + 1));
 	fx_reset(fx_by_owner("ball_l_proj", plrID + 1));
@@ -373,7 +373,7 @@ void start_shangtsung_balls(int plrID, int type)
 		distance = 0.0275f;
 		speed = 0.257f;
 	}
-		
+
 	shang_balls_distance[plrID][0] = speed;
 	shang_balls_distance[plrID][1] = distance;
 

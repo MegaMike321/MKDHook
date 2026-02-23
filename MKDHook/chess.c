@@ -51,6 +51,16 @@ struct mk_file_entry chess_entry_table[CHESS_FILES] = {
 	{"mkc_tremor.sec",0,1},
 	{"mkc_cyrax.sec",0,1},
 	{"mkc_reiko.sec",0,1},
+	{"mkc_rainumk3.sec",0,1},
+	{"mkc_freak.sec",0,1},
+	{"mkc_subzeroumk3.sec",0,1},
+	{"mkc_ermacumk3.sec",0,1},
+	{"mkc_raidenmkda.sec",0,1},
+	{"mkc_cybersub.sec",0,1},
+	{"mkc_ghost.sec",0,1},
+	{"mkc_hornbuckle.sec",0,1},
+	{"mkc_torch.sec",0,1},
+	{"mkc_raidenlight.sec",0,1},
 	{"board_game_config.mko",0,3},
 	{"boardgame_fx.mko",0,3},
 	{"boardgame_strings_eng.mko",0,3},
@@ -106,34 +116,45 @@ struct mk_toc_entry chess_file_table[CHESS_FILES + 1] = {
 		{&chess_entry_table[37], 0, 127104},    //	mkc_kung.sec
 		{&chess_entry_table[38], 0, 126848},    //	mkc_cage.sec
 		{&chess_entry_table[39], 0, 146688},    //	mkc_sektor.sec
-		{&chess_entry_table[40], 0, 113408},    //	mkc_rain.sec
+		{&chess_entry_table[40], 0, 113792},    //	mkc_rain.sec
 		{&chess_entry_table[41], 0, 135168},    //	mkc_nitara.sec
 		{&chess_entry_table[42], 0, 113408},    //	mkc_tremor.sec
 		{&chess_entry_table[43], 0, 146688},    //	mkc_cyrax.sec
 		{&chess_entry_table[44], 0, 125184},    //	mkc_reiko.sec
-		{&chess_entry_table[45], 0, 32928 },    //	board_game_config.mko
-		{&chess_entry_table[46], 0, 22152 },    //	boardgame_fx.mko
-		{&chess_entry_table[47], 0, 1628  },    //	boardgame_strings_eng.mko
-		{&chess_entry_table[48], 0, 1792  },    //	boardgame_strings_spa.mko
-		{&chess_entry_table[49], 0, 1604  },    //	boardgame_strings_ger.mko
-		{&chess_entry_table[50], 0, 1732  },    //	boardgame_strings_fre.mko
-		{&chess_entry_table[51], 0, 1716  },    //	boardgame_strings_ita.mko
-		{&chess_entry_table[52], 0, 1628  },    //	boardgame_strings_eng_uk.mko
-		{&chess_entry_table[53], 0, 354432},    //	mk_chess_anims.sec
-
+		{&chess_entry_table[45], 0, 113408},    //	mkc_rainumk3.sec
+		{&chess_entry_table[46], 0, 134784},    //	mkc_freak.sec
+		{&chess_entry_table[47], 0, 113408},    //	mkc_subzeroumk3.sec
+		{&chess_entry_table[48], 0, 113408},    //	mkc_ermacumk3.sec
+		{&chess_entry_table[49], 0, 152832},    //	mkc_raidenmkda.sec
+		{&chess_entry_table[50], 0, 146688},    //	mkc_cybersub.sec
+		{&chess_entry_table[51], 0, 122880},    //	mkc_ghost.sec
+		{&chess_entry_table[52], 0, 123008},    //	mkc_hornbuckle.sec
+		{&chess_entry_table[53], 0, 122880},    //	mkc_torch.sec
+		{&chess_entry_table[54], 0, 157440},    //	mkc_raidenlight.sec
+		{&chess_entry_table[55], 0, 33096 },    //	board_game_config.mko
+		{&chess_entry_table[56], 0, 22152 },    //	boardgame_fx.mko
+		{&chess_entry_table[57], 0, 1628  },    //	boardgame_strings_eng.mko
+		{&chess_entry_table[58], 0, 1792  },    //	boardgame_strings_spa.mko
+		{&chess_entry_table[59], 0, 1604  },    //	boardgame_strings_ger.mko
+		{&chess_entry_table[60], 0, 1732  },    //	boardgame_strings_fre.mko
+		{&chess_entry_table[61], 0, 1716  },    //	boardgame_strings_ita.mko
+		{&chess_entry_table[62], 0, 1628  },    //	boardgame_strings_eng_uk.mko
+		{&chess_entry_table[63], 0, 354432},    //	mk_chess_anims.sec
 
 		{0,0,0}
 };
 
 
 static int chess_characters[CHESS_PIECES] = {
-	SCORPION, BARAKA, SUBZERO, MILEENA, NIGHTWOLF, ERMAC, 
-	ASHRAH, SINDEL, LI_MEI, BORAICHO, HOTARU, KENSHI, HAVIK, 
-	TANYA, LIU_KANG, KIRA, KABAL, KOBRA, JADE, DAIROU, 
+	SCORPION, BARAKA, SUBZERO, MILEENA, NIGHTWOLF, ERMAC,
+	ASHRAH, SINDEL, LI_MEI, BORAICHO, HOTARU, KENSHI, HAVIK,
+	TANYA, LIU_KANG, KIRA, KABAL, KOBRA, JADE, DAIROU,
 	RAIDEN, DARRIUS, SHUJINKO, NOOBSMOKE, SHAO_KAHN, GORO,
 	FROST, KITANA, JAX, BLAZE, SONYA, DRAHMIN, SAREENA, QUAN_CHI,
 	SHANG_TSUNG, KUNG_LAO, CAGE, SEKTOR, RAIN, NITARA, TREMOR,
-	CYRAX, REIKO
+	CYRAX, REIKO, RAIN2, SCORPION2, SUBZERO2, ERMAC2, RAIDEN2,
+	SUBZERO3, LIU_KANG2, LIU_KANG3, BLAZE2, RAIDEN3,
+
 };
 
 void init_chess_hook()

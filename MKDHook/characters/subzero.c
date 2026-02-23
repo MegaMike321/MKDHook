@@ -121,6 +121,165 @@ struct mk_toc_entry subzero2_alt_file_table[SUBZERO_FILES + 1] = {
 		{0,0,0}
 };
 
+struct mk_file_entry subzero3_entry_table[SUBZERO_FILES] = {
+	{"subzero3.ssf"	,0, 4},
+
+	{"subzero.sec",0, 1},
+	{"subzero_ap.sec",0, 1},
+	{"sh_subzero.sec",0, 1},
+	{"subzero.mko",0, 3},
+	{"subzero_fx.mko",0,3},
+	{"fight_fx.mko",0,3},
+	{"blood_fx.mko",0,3},
+	{"shotokan.mko",0, 3},
+	{"style_shotokan.sec",0,1},
+	{"dragons.mko",0, 3},
+	{"style_dragons.sec",0,1},
+	{"koriblade.mko",0, 3},
+	{"style_koriblade.sec",0,1},
+	{"subzero_anims.sec",0, 2},
+	{"fat_anims_subzero.sec",0,2},
+	{"fat_anims_subzero2.sec",0,2},
+	{"shotokan_anims.sec",0, 2},
+	{"dragons_anims.sec",0, 2},
+	{"koriblade_anims.sec",0,2},
+	{"pz_subzero_anims.sec",0,2},
+};
+
+// I:\ps2dvd\art\subzero3.ssf
+struct mk_toc_entry subzero3_file_table[SUBZERO_FILES + 1] = {
+		{&subzero3_entry_table[0]	,0,0 },
+
+		{&subzero3_entry_table[1]	,0,	   563328 },	// subzero.sec
+		{&subzero3_entry_table[2]	,0,    563328 },	// subzero_ap.sec
+		{&subzero3_entry_table[3]	,0,    667008 },	// sh_subzero.sec
+		{&subzero3_entry_table[4]	,0,    61088  },	// subzero.mko
+		{&subzero3_entry_table[5]	,0,    20784  },	// subzero_fx.mko
+		{&subzero3_entry_table[6]	,0,    10164  },	// fight_fx.mko
+		{&subzero3_entry_table[7]	,0,    21368  },	// blood_fx.mko
+		{&subzero3_entry_table[8] 	,0,	   13972  },	// shotokan.mko
+		{&subzero3_entry_table[9]	,0,    10112  },	// style_shotokan.sec
+		{&subzero3_entry_table[10]	,0,	   15072  },	// dragons.mko
+		{&subzero3_entry_table[11]	,0,    6016   },	// style_dragons.sec
+		{&subzero3_entry_table[12]	,0,	   10676  },	// koriblade.mko
+		{&subzero3_entry_table[13]	,0,	   10112  },	// style_koriblade.sec
+		{&subzero3_entry_table[14]	,0,	   148608 },	// subzero_anims.sec
+		{&subzero3_entry_table[15]	,0,	   78208  },	// fat_anims_subzero.sec
+		{&subzero3_entry_table[16]	,0,	   102912 },	// fat_anims_subzero2.sec
+		{&subzero3_entry_table[17]	,0,	   127872 },	// shotokan_anims.sec
+		{&subzero3_entry_table[18]	,0,	   150784 },	// dragons_anims.sec
+		{&subzero3_entry_table[19]	,0,	   183168 },	// koriblade_anims.sec
+		{&subzero3_entry_table[20]	,0,	   47488  },	// pz_subzero_anims.sec
+
+		{0,0,0}
+};
+
+struct mk_file_entry subzero3_alt_entry_table[SUBZERO_FILES] = {
+	{"subzero3_alt.ssf"	,0, 4},
+
+	{"subzero_alt.sec",0, 1},
+	{"subzero_alt_ap.sec",0, 1},
+	{"sh_subzero.sec",0, 1},
+	{"subzero.mko",0, 3},
+	{"subzero_fx.mko",0,3},
+	{"fight_fx.mko",0,3},
+	{"blood_fx.mko",0,3},
+	{"shotokan.mko",0, 3},
+	{"style_shotokan.sec",0,1},
+	{"dragons.mko",0, 3},
+	{"style_dragons.sec",0,1},
+	{"koriblade.mko",0, 3},
+	{"style_koriblade.sec",0,1},
+	{"subzero_alt_anims.sec",0, 2},
+	{"fat_anims_subzero.sec",0,2},
+	{"fat_anims_subzero2.sec",0,2},
+	{"shotokan_anims.sec",0, 2},
+	{"dragons_anims.sec",0, 2},
+	{"koriblade_anims.sec",0,2},
+	{"pz_subzero_anims.sec",0,2},
+};
+
+// I:\ps2dvd\art\subzero3_alt.ssf
+struct mk_toc_entry subzero3_alt_file_table[SUBZERO_FILES + 1] = {
+		{&subzero3_alt_entry_table[0]	,0,0 },
+
+		{&subzero3_alt_entry_table[1]	,0,	   649088 },	// subzero_alt.sec
+		{&subzero3_alt_entry_table[2]	,0,    649088 },	// subzero_alt_ap.sec
+		{&subzero3_alt_entry_table[3]	,0,    667008 },	// sh_subzero.sec
+		{&subzero3_alt_entry_table[4]	,0,    61088  },	// subzero.mko
+		{&subzero3_alt_entry_table[5]	,0,    20784  },	// subzero_fx.mko
+		{&subzero3_alt_entry_table[6]	,0,    10164  },	// fight_fx.mko
+		{&subzero3_alt_entry_table[7]	,0,    21368  },	// blood_fx.mko
+		{&subzero3_alt_entry_table[8] 	,0,	   13972  },	// shotokan.mko
+		{&subzero3_alt_entry_table[9]	,0,    10112  },	// style_shotokan.sec
+		{&subzero3_alt_entry_table[10]	,0,	   15072  },	// dragons.mko
+		{&subzero3_alt_entry_table[11]	,0,    6016   },	// style_dragons.sec
+		{&subzero3_alt_entry_table[12]	,0,	   10676  },	// koriblade.mko
+		{&subzero3_alt_entry_table[13]	,0,	   10112  },	// style_koriblade.sec
+		{&subzero3_alt_entry_table[14]	,0,	   148608 },	// subzero_alt_anims.sec
+		{&subzero3_alt_entry_table[15]	,0,	   78208  },	// fat_anims_subzero.sec
+		{&subzero3_alt_entry_table[16]	,0,	   102912 },	// fat_anims_subzero2.sec
+		{&subzero3_alt_entry_table[17]	,0,	   127872 },	// shotokan_anims.sec
+		{&subzero3_alt_entry_table[18]	,0,	   150784 },	// dragons_anims.sec
+		{&subzero3_alt_entry_table[19]	,0,	   183168 },	// koriblade_anims.sec
+		{&subzero3_alt_entry_table[20]	,0,	   47488  },	// pz_subzero_anims.sec
+
+		{0,0,0}
+};
+
+struct mk_file_entry subzero4_entry_table[SUBZERO_FILES] = {
+	{"subzero4.ssf"	,0, 4},
+
+	{"subzero.sec",0, 1},
+	{"subzero_ap.sec",0, 1},
+	{"sh_subzero.sec",0, 1},
+	{"subzero.mko",0, 3},
+	{"subzero_fx.mko",0,3},
+	{"fight_fx.mko",0,3},
+	{"blood_fx.mko",0,3},
+	{"shotokan.mko",0, 3},
+	{"style_shotokan.sec",0,1},
+	{"dragons.mko",0, 3},
+	{"style_dragons.sec",0,1},
+	{"koriblade.mko",0, 3},
+	{"style_koriblade.sec",0,1},
+	{"subzero_anims.sec",0, 2},
+	{"fat_anims_subzero.sec",0,2},
+	{"fat_anims_subzero2.sec",0,2},
+	{"shotokan_anims.sec",0, 2},
+	{"dragons_anims.sec",0, 2},
+	{"koriblade_anims.sec",0,2},
+	{"pz_subzero_anims.sec",0,2},
+};
+
+// I:\ps2dvd\art\subzero4.ssf
+struct mk_toc_entry subzero4_file_table[SUBZERO_FILES + 1] = {
+		{&subzero4_entry_table[0]	,0,0 },
+
+		{&subzero4_entry_table[1]	,0,	   497024 },	// subzero.sec
+		{&subzero4_entry_table[2]	,0,    497024 },	// subzero_ap.sec
+		{&subzero4_entry_table[3]	,0,    667008 },	// sh_subzero.sec
+		{&subzero4_entry_table[4]	,0,    61088  },	// subzero.mko
+		{&subzero4_entry_table[5]	,0,    20784  },	// subzero_fx.mko
+		{&subzero4_entry_table[6]	,0,    10164  },	// fight_fx.mko
+		{&subzero4_entry_table[7]	,0,    21368  },	// blood_fx.mko
+		{&subzero4_entry_table[8] 	,0,	   13972  },	// shotokan.mko
+		{&subzero4_entry_table[9]	,0,    10112  },	// style_shotokan.sec
+		{&subzero4_entry_table[10]	,0,	   15072  },	// dragons.mko
+		{&subzero4_entry_table[11]	,0,    6016   },	// style_dragons.sec
+		{&subzero4_entry_table[12]	,0,	   10676  },	// koriblade.mko
+		{&subzero4_entry_table[13]	,0,	   10112  },	// style_koriblade.sec
+		{&subzero4_entry_table[14]	,0,	   148608 },	// subzero_anims.sec
+		{&subzero4_entry_table[15]	,0,	   78208  },	// fat_anims_subzero.sec
+		{&subzero4_entry_table[16]	,0,	   102912 },	// fat_anims_subzero2.sec
+		{&subzero4_entry_table[17]	,0,	   127872 },	// shotokan_anims.sec
+		{&subzero4_entry_table[18]	,0,	   150784 },	// dragons_anims.sec
+		{&subzero4_entry_table[19]	,0,	   183168 },	// koriblade_anims.sec
+		{&subzero4_entry_table[20]	,0,	   47488  },	// pz_subzero_anims.sec
+
+		{0,0,0}
+};
+
 
 
 void fat_sz_start_iceblock()
@@ -159,5 +318,44 @@ void init_subzero_toc()
 	{
 		subzero2_alt_file_table[i].previousSize = baseSize;
 		baseSize += (subzero2_alt_file_table[i].size + 2048 - 1) & -2048;
+	}
+
+	baseSize = 2048;
+	for (int i = 0; i < SUBZERO_FILES; i++)
+	{
+		subzero3_entry_table[i].belong = &subzero3_file_table[0];
+	}
+
+
+	for (int i = 1; i < SUBZERO_FILES; i++)
+	{
+		subzero3_file_table[i].previousSize = baseSize;
+		baseSize += (subzero3_file_table[i].size + 2048 - 1) & -2048;
+	}
+
+	baseSize = 2048;
+	for (int i = 0; i < SUBZERO_FILES; i++)
+	{
+		subzero3_alt_entry_table[i].belong = &subzero3_alt_file_table[0];
+	}
+
+
+	for (int i = 1; i < SUBZERO_FILES; i++)
+	{
+		subzero3_alt_file_table[i].previousSize = baseSize;
+		baseSize += (subzero3_alt_file_table[i].size + 2048 - 1) & -2048;
+	}
+
+	baseSize = 2048;
+	for (int i = 0; i < SUBZERO_FILES; i++)
+	{
+		subzero4_entry_table[i].belong = &subzero4_file_table[0];
+	}
+
+
+	for (int i = 1; i < SUBZERO_FILES; i++)
+	{
+		subzero4_file_table[i].previousSize = baseSize;
+		baseSize += (subzero4_file_table[i].size + 2048 - 1) & -2048;
 	}
 }

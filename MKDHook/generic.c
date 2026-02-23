@@ -12,7 +12,7 @@ void init_generic()
 	//makeJal(0x215D7C, patch_freeze_reaction);
 	makeJmp(0x215D90, freeze_reaction_patch);
 	makeJmp(0x215DA0, freeze_reaction_patchP2);
-	
+
 	makeJmp(0x3CFD68, cyrax_bomb_hack_check);
 
 	makeJmp(0x13BA88, eye_gore_check);
@@ -305,7 +305,7 @@ int death_traps_lock()
 		if (p1->characterID == BLAZE || p2->characterID == BLAZE)
 		{
 			if (bgnd == BGS_SKYTEMPLE || bgnd == BGS_LOWERMINES || bgnd == BGS_DARKPRISON || bgnd == BGS_FORTRESS)
-			return 0;
+				return 0;
 		}
 	}
 
@@ -351,9 +351,11 @@ void update_character(player_info* info)
 		goro_arms_bone_copy(info->pObject);
 		break;
 	case SEKTOR:
+	case SEKTOR2:
 		sektor_update_chest(info->id, info->pObject, info->flags);
 		break;
 	case CYRAX:
+	case CYRAX2:
 		sektor_update_chest(info->id, info->pObject, 0);
 		cyrax_update_cutter(info->id, info->pObject);
 		break;

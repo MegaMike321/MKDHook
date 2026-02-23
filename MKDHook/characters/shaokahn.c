@@ -30,7 +30,7 @@ struct scan_action_dual_fatality scan_sk_2 = {
 	17,
 	MOVE_FORWARD,
 	MOVE_FORWARD,
-	
+
 	// fatality one
 	2.0f,
 	0x1000032,
@@ -106,7 +106,7 @@ struct mk_toc_entry sk_file_table[SK_FILES + 1] = {
 
 		{&sk_entry_table[1]	,0,	   470144 },	// shaokahn.sec
 		{&sk_entry_table[2]	,0,    470144 },	// shaokahn_ap.sec
-		{&sk_entry_table[3]	,0,    48512  },	// shaokahn.mko
+		{&sk_entry_table[3]	,0,    48536  },	// shaokahn.mko
 		{&sk_entry_table[4]	,0,    309632 },	// sh_shaokahn.sec
 		{&sk_entry_table[5]	,0,    10164  },	// fight_fx.mko
 		{&sk_entry_table[6]	,0,    21368  },	// blood_fx.mko
@@ -159,7 +159,7 @@ struct mk_toc_entry sk_alt_file_table[SK_FILES + 1] = {
 
 		{&sk_alt_entry_table[1]	,0,	   493696 },	// shaokahn_alt.sec
 		{&sk_alt_entry_table[2]	,0,    493696 },	// shaokahn_alt_ap.sec
-		{&sk_alt_entry_table[3]	,0,    48512  },	// shaokahn.mko
+		{&sk_alt_entry_table[3]	,0,    48536  },	// shaokahn.mko
 		{&sk_alt_entry_table[4]	,0,    309632 },	// sh_shaokahn.sec
 		{&sk_alt_entry_table[5]	,0,    10164  },	// fight_fx.mko
 		{&sk_alt_entry_table[6]	,0,    21368  },	// blood_fx.mko

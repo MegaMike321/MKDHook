@@ -1,7 +1,7 @@
 #pragma once
 #include "..\toc.h"
 
-#define KON_NPC_FILES 65
+#define KON_NPC_FILES 127
 
 
 extern struct mk_file_entry kon_npc_entry_table[KON_NPC_FILES];

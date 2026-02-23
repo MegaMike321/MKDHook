@@ -8,8 +8,7 @@
 #define SELECT_SCREEN_ALT_PAL_SOUND 7020
 #define SELECT_SCREEN_EXTRA_SOUND 7022
 #define SELECT_SCREEN_ALT_PAL_FONT 5
-#define SELECT_SCREEN_EXTRA_NUM 5
-
+#define SELECT_SCREEN_EXTRA_NUM 12
 typedef struct {
 	int swapCharacter;
 	int sourceCharacter;

@@ -118,7 +118,7 @@ struct mk_toc_entry rain_alt_file_table[RAIN_FILES + 1] = {
 		{&rain_alt_entry_table[0]	,0,0 },
 
 		{&rain_alt_entry_table[1]	,0,	   843648 },	// rain_alt.sec             
-		{&rain_alt_entry_table[2]	,0,    597888 },	// rain_alt_ap.sec        
+		{&rain_alt_entry_table[2]	,0,    843648 },	// rain_alt_ap.sec //597888     
 		{&rain_alt_entry_table[3]	,0,    26240  },	// rain.mko   
 		{&rain_alt_entry_table[4]	,0,    311552 },	// sh_rain.sec           
 		{&rain_alt_entry_table[5]	,0,    10164  },	// fight_fx.mko         

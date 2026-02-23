@@ -24,6 +24,12 @@ extern struct mk_toc_entry cyrax_file_table[CYRAX_FILES + 1];
 extern struct mk_file_entry cyrax_alt_entry_table[CYRAX_FILES];
 extern struct mk_toc_entry cyrax_alt_file_table[CYRAX_FILES + 1];
 
+extern struct mk_file_entry cyrax2_entry_table[CYRAX_FILES];
+extern struct mk_toc_entry cyrax2_file_table[CYRAX_FILES + 1];
+
+extern struct mk_file_entry cyrax2_alt_entry_table[CYRAX_FILES];
+extern struct mk_toc_entry cyrax2_alt_file_table[CYRAX_FILES + 1];
+
 extern struct scan_action_dual scan_cyrax_1;
 extern struct scan_action scan_cyrax_3;
 extern struct scan_action scan_cyrax_4;

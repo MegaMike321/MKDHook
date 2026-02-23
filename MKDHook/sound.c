@@ -6,7 +6,7 @@
 
 
 void init_sound_hook()
-{	
+{
 	// num
 	patchShort(0x128CBC, TOTAL_SOUNDS);
 	patchShort(0x128CD4, TOTAL_SOUNDS);
@@ -230,7 +230,7 @@ void init_sound_hook()
 	patchInt(0x12B798 + 4, ori(v0, v0, LOWORD(val)));
 
 	patchInt(0x12B9AC, lui(v0, HIWORD(val)));
-	patchInt(0x12B9AC  + 4, ori(v0, v0, LOWORD(val)));
+	patchInt(0x12B9AC + 4, ori(v0, v0, LOWORD(val)));
 }
 
 #ifndef  PS2_BUILD
@@ -242,7 +242,7 @@ void dump_sound_table()
 	for (int i = 0; i < TOTAL_SOUNDS; i++)
 	{
 		sound_entry snd = *(sound_entry*)(addr + (sizeof(sound_entry) * i));
-	//	sprintf(msgBuffer, "{%d, %d, %d, %d, %x, %d, %d},\n", snd.field0, snd.field4, snd.field8, snd.field12, snd.volume, snd.field20, snd.field24);
+		//	sprintf(msgBuffer, "{%d, %d, %d, %d, %x, %d, %d},\n", snd.field0, snd.field4, snd.field8, snd.field12, snd.volume, snd.field20, snd.field24);
 		_printf("{%d, %d, %d, %d, %f, %d, %d},", snd.field0, snd.field4, snd.field8, snd.field12, snd.volume, snd.field20, snd.field24);
 		_printf(" # %3d\n", i);
 	}
@@ -7759,7 +7759,7 @@ sound_entry mk_sound_table[TOTAL_SOUNDS] =
 	{ BANK_FIGHTER_GORO, 20, -1, 1, 1.000000, 6, 1 }, // 25 
 	{ BANK_FIGHTER_GORO, 21, -1, 1, 1.000000, 6, 1 }, // 26 
 	{ BANK_FIGHTER_GORO, 20, -1, 1, 1.000000, 6, 1 }, // 27 
-			
+
 	// hit leg medium (also face for some reason)
 	{ BANK_FIGHTER_GORO, 11, -1, 1, 1.000000, 6, 1 }, // 28 
 	{ BANK_FIGHTER_GORO, 12, -1, 1, 1.000000, 6, 1 }, // 29 
@@ -8015,4 +8015,23 @@ sound_entry mk_sound_table[TOTAL_SOUNDS] =
 
 	{ 6, 176, -1, 1, 1.000000, 4, 1 }, // tremor select (7614)
 	{ 6, 177, -1, 1, 1.000000, 4, 1 }, // tremor wins (7615)
+
+	{ 6, 178, -1, 1, 1.000000, 4, 1 }, // shinnok select (7616)
+	{ 6, 179, -1, 1, 1.000000, 4, 1 }, // shinnok wins (7617)
+
+	{ 6, 180, -1, 1, 1.000000, 4, 1 }, // mokap select (7618)
+	{ 6, 181, -1, 1, 1.000000, 4, 1 }, // mokap wins (7619)
+
+	{ 6, 182, -1, 1, 1.000000, 4, 1 }, // kano select (7620)
+	{ 6, 183, -1, 1, 1.000000, 4, 1 }, // kano wins (7621)
+
+	{ 6, 184, -1, 1, 1.000000, 4, 1 }, // monster select (7622)
+	{ 6, 185, -1, 1, 1.000000, 4, 1 }, // monster wins (7623)
+
+	{ 6, 186, -1, 1, 1.000000, 4, 1 }, // ghost select (7624)
+	{ 6, 187, -1, 1, 1.000000, 4, 1 }, // ghost wins (7625)
+
+	{ 6, 188, -1, 1, 1.000000, 4, 1 }, // hornbuckle select (7226)
+	{ 6, 189, -1, 1, 1.000000, 4, 1 }, // hornbuckle wins (7227)
+
 };

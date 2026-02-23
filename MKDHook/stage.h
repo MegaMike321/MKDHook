@@ -56,6 +56,9 @@ enum backgrounds {
 	// new
 	BGS_KATAKOMBS,
 	BGS_ACIDBATH,
+	BGS_PORTAL2,
+	BGS_SKYTEMPLE2,
+	BGS_COURTYARD2,
 	// fake clones
 	BGS_EARTH_1_DOJO,
 	BGS_NETHERREALM_DOJO,
@@ -69,6 +72,7 @@ enum backgrounds {
 // from mkuhook
 void dump_stage_table(unsigned int addr);
 void dump_select_stable(unsigned int addr);
+void dump_chess_select_stable(unsigned int addr);
 #endif // !PS2_BUILD
 
 

@@ -6,12 +6,15 @@
 #include "mips.h"
 #include "ladder.h"
 #include "character.h"
-// stage incldues
+// stage includes
 
 #include "stages/acidbath.h"
 #include "stages/katakombs.h"
 #include "stages/darkprison.h"
 #include "stages/teststage.h"
+#include "stages/portal.h"
+#include "stages/skytemple.h"
+#include "stages/courtyard.h"
 
 struct stage_info_entry pStageTable[] = {
 	{0x5A3770	, "beetlelair.mko"	, 18	,1,},
@@ -52,6 +55,9 @@ struct stage_info_entry pStageTable[] = {
 	// new
 	{(int)&katakombs_file_table[0]	, "katakombs.mko"	, 0	,0,},
 	{(int)&acidbath_file_table[0]	, "acidbath.mko"	, 0	,0,},
+	{(int)&portal2_file_table[0]	, "portal.mko"	, 29 ,9,},
+	{(int)&skytemple2_file_table[0]	, "skytemple.mko"	, 24 ,1,},
+	{(int)&courtyard2_file_table[0]	, "courtyard.mko"	, 28	,9,},
 	// clones for dojo
 	{0x5A4790	, "earth_1.mko"	, 0	,0,},
 	{0x5A5AC0	, "netherrealm_1.mko"	, 0	,4,},
@@ -87,6 +93,9 @@ struct stage_select_entry pStageSelectNormal[] = {
 	// NEW
 	{BGS_KATAKOMBS,	"KATAKOMBS", "BGS_KATAKOMBS"	, 0},
 	{BGS_ACIDBATH,	"ACIDBATH", "BGS_ACIDBATH"	, 0},
+	{BGS_PORTAL2,	"BLUE PORTAL", "BGS_PORTAL_BLUE"	, 0},
+	{BGS_SKYTEMPLE2,	"INFECTED SKY TEMPLE", "BGS_SKYTEMPLE_RED"	, 7},
+	{BGS_COURTYARD2	, "COURTYARD (NIGHT)"	,"BGS_COURTYARD_NIGHT"	, 0	},
 	// KONQUEST DOJOS
 	{BGS_EARTH_1_DOJO,	"EARTH DOJO", "BGS_EARTHDOJO"	, 0},
 	{BGS_NETHERREALM_DOJO,	"NETHERREALM DOJO", "BGS_NETHERDOJO"	, 0},
@@ -152,13 +161,29 @@ void dump_select_stable(unsigned int addr)
 		_printf(msgBuffer);
 	}
 }
+
+void dump_chess_select_stable(unsigned int addr)
+{
+	int stage_addr = 0x4FEE90;
+	char msgBuffer[1256];
+	for (int i = 0; i < 5; i++)
+	{
+		struct  stage_select_entry stage = *(struct stage_select_entry*)(stage_addr + (sizeof(struct stage_select_entry) * i));
+		sprintf(msgBuffer, "{%d\t, \"%s\"\t,\"%s\"\t, %d\t},\n",
+			stage.id,
+			stage.name,
+			stage.previewImage,
+			stage.unk);
+		_printf(msgBuffer);
+	}
+}
 #endif // !PS2_BUILD
 
 int hook_bgnd_locked(int id)
 {
 	int select_mode = *(int*)0x5D676C;
 	if (!(select_mode == 2))
-	id = BGS_THEPIT;
+		id = BGS_THEPIT;
 	return is_bgnd_locked(id);
 }
 void play_kon_music()
@@ -218,8 +243,22 @@ char* hook_ladder_stage_name(int id)
 	{
 		switch (stage_id)
 		{
+		case BGS_EARTH_1: return "EARTHREALM";
+		case BGS_NETHERREALM: return "NETHERREALM";
+		case BGS_CHAOSREALM: return "CHAOSREALM";
+		case BGS_OUTWORLD: return "OUTWORLD";
+		case BGS_ORDERREALM: return "ORDERREALM";
+		case BGS_EDENIA: return "EDENIA";
 		case BGS_KATAKOMBS: return "KATAKOMBS";
 		case BGS_ACIDBATH: return "ACIDBATH";
+		case BGS_PORTAL2: return "BLUE PORTAL";
+		case BGS_SKYTEMPLE2: return "INFECTED SKY TEMPLE";
+		case BGS_COURTYARD2: return "COURTYARD NIGHT";
+		case BGS_EARTH_1_DOJO: return "EARTHREALM DOJO";
+		case BGS_NETHERREALM_DOJO: return "NETHERREALM DOJO";
+		case BGS_CHAOSREALM_DOJO: return "CHAOSREALM DOJO";
+		case BGS_OUTWORLD_DOJO: return "OUTWORLD DOJO";
+		case BGS_ORDERREALM_DOJO: return "ORDERREALM DOJO";
 		default:
 			return "TODONAME";
 			break;
@@ -337,6 +376,13 @@ void init_stage_hook()
 
 	// CHESS (bg)
 
+	static short selectChessSize = sizeof(pStageSelectChess) / sizeof(pStageSelectChess[0]);
+	patchShort(0x191EB8, selectChessSize);
+	patchShort(0x192D88, selectChessSize);
+	patchShort(0x192E60, selectChessSize);
+	patchShort(0x19318C, selectChessSize);
+	patchShort(0x193068, selectChessSize);
+
 	val = (int)&pStageSelectChess[0];
 
 	patchInt(0x191E08, lui(a0, HIWORD(val)));
@@ -366,6 +412,13 @@ void init_stage_hook()
 
 
 	// PUZZLE
+
+	static short selectPuzzleSize = sizeof(pStageSelectPuzzle) / sizeof(pStageSelectPuzzle[0]);
+	patchShort(0x191EC4, selectPuzzleSize);
+	patchShort(0x192D94, selectPuzzleSize);
+	patchShort(0x192E70, selectPuzzleSize);
+	patchShort(0x19319C, selectPuzzleSize);
+	patchShort(0x19305C, selectPuzzleSize);
 
 	val = (int)&pStageSelectPuzzle[0];
 
@@ -456,4 +509,7 @@ void init_stage_tocs()
 	init_katakombs_toc();
 	init_acidbath_toc();
 	init_dkp_toc();
+	init_portal_toc();
+	init_skytemple_toc();
+	init_courtyard_toc();
 }

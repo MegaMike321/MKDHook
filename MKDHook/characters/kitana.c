@@ -180,7 +180,6 @@ void init_kitana_toc()
 	}
 
 	baseSize = 2048;
-
 	for (int i = 0; i < KITANA_FILES; i++)
 	{
 		kitana_alt_entry_table[i].belong = &kitana_alt_file_table[0];
@@ -192,6 +191,7 @@ void init_kitana_toc()
 		kitana_alt_file_table[i].previousSize = baseSize;
 		baseSize += (kitana_alt_file_table[i].size + 2048 - 1) & -2048;
 	}
+
 }
 
 kitana_bone_stretcher_entry kitana_bone_stretchers[NUM_STRETCHBONES] = {

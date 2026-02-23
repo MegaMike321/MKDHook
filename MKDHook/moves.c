@@ -83,6 +83,14 @@ int scan_table_1_jump_table[] = {
 	0x202730,	 // 	UMKD_SUBZERO2
 	0x20269C,	 // 	UMKD_ERMAC2,
 	0x202800,	 // 	UMKD_RAIDEN2,
+	0x202730,    //     UMKD_SUBZERO3,
+	0x202814,    //     UMKD_LIU_KANG2,
+	0x202730,    //     UMKD_SUBZERO4,
+	0x202814,    //     UMKD_LIU_KANG3,
+	0x202800,	 // 	UMKD_RAIDEN3,
+	SCAN1_UNIVERSAL_JUMP, //  UMKD_BLAZE2,
+	SCAN1_UNIVERSAL_JUMP, //  UMKD_CYRAX2,
+	SCAN1_UNIVERSAL_JUMP, //  UMKD_SEKTOR2
 };
 
 
@@ -155,6 +163,14 @@ int scan_table_2_jump_table[] = {
 	0x202258, // 	UMKD_SUBZERO2,
 	SCAN2_UNIVERSAL_JUMP, // 	UMKD_ERMAC2,
 	0x202354, // 	UMKD_RAIDEN2,
+	0x202258, //    UMKD_SUBZERO3,
+	0x2021A4, //    UMKD_LIU_KANG2,
+	0x202258, //    UMKD_SUBZERO4,
+	0x2021A4, //    UMKD_LIU_KANG3,
+	0x202354, // 	UMKD_RAIDEN3,
+	SCAN2_UNIVERSAL_JUMP, //  UMKD_BLAZE2
+	0x20239C, //  UMKD_CYRAX2,
+	0x20239C, //  UMKD_SEKTOR2
 };
 
 int scan_table_3_jump_table[] = {
@@ -226,6 +242,14 @@ int scan_table_3_jump_table[] = {
 	0x201DBC, // 	UMKD_SUBZERO2,
 	0x201D6C, // 	UMKD_ERMAC2,
 	0x201EA8, // 	UMKD_RAIDEN2,
+	0x201DBC, //    UMKD_SUBZERO3,
+	0x201F1C, //    UMKD_LIU_KANG2,
+	0x201DBC, //    UMKD_SUBZERO4,
+	0x201F1C, //    UMKD_LIU_KANG3,
+	0x201EA8, // 	UMKD_RAIDEN3,
+	SCAN3_UNIVERSAL_JUMP, //  UMKD_BLAZE2
+	SCAN3_UNIVERSAL_JUMP, //  UMKD_CYRAX2,
+	SCAN3_UNIVERSAL_JUMP, //  UMKD_SEKTOR2
 };
 
 int scan_table_4_jump_table[] = {
@@ -297,6 +321,14 @@ int scan_table_4_jump_table[] = {
 	SCAN4_UNIVERSAL_JUMP, //	UMKD_SUBZERO2,
 	0x2018A8, //	UMKD_ERMAC2,
 	0x201A10, //	UMKD_RAIDEN2,
+	SCAN4_UNIVERSAL_JUMP, //    UMKD_SUBZERO3,
+	0x201A98, //    UMKD_LIU_KANG2,
+	SCAN4_UNIVERSAL_JUMP, //    UMKD_SUBZERO4,
+	0x201A98, //    UMKD_LIU_KANG3,
+	0x201A10, //	UMKD_RAIDEN3,
+	0x201B0C, // UMKD_BLAZE2
+	SCAN4_UNIVERSAL_JUMP, // UMKD_CYRAX2,
+	SCAN4_UNIVERSAL_JUMP, //  UMKD_SEKTOR2
 };
 
 
@@ -397,6 +429,7 @@ int swap_scan_table_1()
 			scan_action_set = (int)&scan_frost_1;
 			break;
 		case BLAZE:
+		case BLAZE2:
 			scan_action_set = (int)&scan_blaze_1;
 			break;
 		case SHAO_KAHN:
@@ -428,9 +461,11 @@ int swap_scan_table_1()
 			scan_action_set = (int)&scan_rain_1;
 			break;
 		case SEKTOR:
+		case SEKTOR2:
 			scan_action_set = (int)&scan_sektor_1;
 			break;
 		case CYRAX:
+		case CYRAX2:
 			scan_action_set = (int)&scan_cyrax_1;
 			break;
 		case REIKO:
@@ -474,6 +509,7 @@ int swap_scan_table_2()
 			scan_action_set = (int)&scan_jax_2;
 			break;
 		case BLAZE:
+		case BLAZE2:
 			scan_action_set = (int)&scan_blaze_2;
 			break;
 		case SHAO_KAHN:
@@ -548,6 +584,7 @@ int swap_scan_table_3()
 				scan_action_set = (int)&scan_null;
 			break;
 		case BLAZE:
+		case BLAZE2:
 			scan_action_set = (int)&scan_blaze_3;
 			break;
 		case SHAO_KAHN:
@@ -582,6 +619,7 @@ int swap_scan_table_3()
 			scan_action_set = (int)&scan_nitara_3;
 			break;
 		case SEKTOR:
+		case SEKTOR2:
 			if ((*(int*)(p2_pdata + 532) & 0x400) == 0)
 				scan_action_set = (int)&scan_sektor_3;
 			else
@@ -591,6 +629,7 @@ int swap_scan_table_3()
 			scan_action_set = (int)&scan_tremor_3;
 			break;
 		case CYRAX:
+		case CYRAX2:
 			scan_action_set = (int)&scan_cyrax_3;
 			break;
 		case REIKO:
@@ -620,6 +659,8 @@ int swap_scan_table_4()
 		{
 		case SUBZERO:
 		case SUBZERO2:
+		case SUBZERO3:
+		case SUBZERO4:
 			scan_action_set = (int)&scan_subzero_4;
 			break;
 		case SMOKE:
@@ -656,6 +697,7 @@ int swap_scan_table_4()
 			scan_action_set = (int)&scan_nitara_4;
 			break;
 		case SEKTOR:
+		case SEKTOR2:
 			scan_action_set = (int)&scan_sektor_4;
 			break;
 		case KITANA:
@@ -665,6 +707,7 @@ int swap_scan_table_4()
 			scan_action_set = (int)&scan_tremor_4;
 			break;
 		case CYRAX:
+		case CYRAX2:
 			scan_action_set = (int)&scan_cyrax_4;
 			break;
 		case REIKO:
@@ -714,6 +757,31 @@ void do_harakiri_hook()
 			scan_switch_sequences((int*)0x501750);
 	}
 	else if (chrID == RAIDEN2)
+	{
+		if (was_button_pressed(PAD_SQUARE))
+			scan_switch_sequences((int*)0x501950);
+	}
+	else if (chrID == SUBZERO3)
+	{
+		if (was_button_pressed(PAD_TRIANGLE))
+			scan_switch_sequences((int*)0x501750);
+	}
+	else if (chrID == SUBZERO4)
+	{
+		if (was_button_pressed(PAD_TRIANGLE))
+			scan_switch_sequences((int*)0x501750);
+	}
+	else if (chrID == LIU_KANG2)
+	{
+		if (was_button_pressed(PAD_CROSS))
+			scan_switch_sequences((int*)0x501890);
+	}
+	else if (chrID == LIU_KANG3)
+	{
+		if (was_button_pressed(PAD_CROSS))
+			scan_switch_sequences((int*)0x501890);
+	}
+	else if (chrID == RAIDEN3)
 	{
 		if (was_button_pressed(PAD_SQUARE))
 			scan_switch_sequences((int*)0x501950);

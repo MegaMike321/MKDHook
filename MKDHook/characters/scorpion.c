@@ -60,7 +60,7 @@ struct mk_toc_entry scorpion2_file_table[SCORPION_FILES + 1] = {
 		{&scorpion2_entry_table[1]	,0,	   448768 },	// scorpion.sec
 		{&scorpion2_entry_table[2]	,0,    448768 },	// scorpion_ap.sec
 		{&scorpion2_entry_table[3]	,0,    306176 },	// sh_scorpion.sec
-		{&scorpion2_entry_table[4]	,0,    43520  },	// scorpion.mko
+		{&scorpion2_entry_table[4]	,0,    43444  },	// scorpion.mko
 		{&scorpion2_entry_table[5]	,0,    10164  },	// fight_fx.mko
 		{&scorpion2_entry_table[6]	,0,    21368  },	// blood_fx.mko
 		{&scorpion2_entry_table[7]	,0,    4724   },	// scorpion_fx.mko
@@ -80,7 +80,6 @@ struct mk_toc_entry scorpion2_file_table[SCORPION_FILES + 1] = {
 
 		{0,0,0}
 };
-
 
 void init_scorpion_toc()
 {

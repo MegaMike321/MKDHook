@@ -30,7 +30,6 @@ struct mk_file_entry kon_npc_entry_table[KON_NPC_FILES] = {
 		{"kon_limei.sec", 0, 1 },
 		{"kon_mileena.sec", 0, 1 },
 		{"kon_mokap.sec", 0, 1 },
-		{"kon_moloc.sec", 0, 1 },
 		{"kon_nightwolf.sec", 0, 1 },
 		{"kon_noob.sec", 0, 1 },
 		{"kon_rain.sec", 0, 1 },
@@ -64,11 +63,74 @@ struct mk_file_entry kon_npc_entry_table[KON_NPC_FILES] = {
 		{"kon_kang_dead.sec", 0, 1 },
 		{"kon_shinnok.sec", 0, 1 },
 		{"kon_nitara.sec", 0, 1 },
-		{"kon_khameleon.sec", 0, 1 },
 		{"kon_mavado.sec", 0, 1 },
 		{"kon_spec_forc.sec", 0, 1 },
 		{"kon_meat.sec", 0, 1 },
 		{"kon_tremor.sec", 0, 1 },
+		{"kon_subzeroumk3.sec", 0, 1 },
+		{"kon_ermacumk3.sec", 0, 1 },
+		{"kon_cyber_subzero.sec", 0, 1 },
+		{"kon_freak.sec", 0, 1 },
+		{"kon_torch.sec", 0, 1 },
+		{"kon_rainmk2.sec", 0, 1 },
+		{"kon_noob_alt.sec", 0, 1 },
+		{"kon_smoke_alt.sec", 0, 1 },
+		{"kon_raidenmk5_dark.sec", 0, 1 },
+		{"kon_hornbuckle.sec", 0, 1 },
+		{"kon_hornbuckle_dead.sec", 0, 1 },
+		{"kon_raidenmk6_light.sec", 0, 1 },
+		{"kon_sektor_te.sec", 0, 1 },
+		{"kon_ashrah_ap.sec", 0, 1 },
+		{"kon_baraka_ap.sec", 0, 1 },
+		{"kon_blaze_ap.sec", 0, 1 },
+		{"kon_boraicho_ap.sec", 0, 1 },
+		{"kon_cage_ap.sec", 0, 1 },
+		{"kon_drahmin_ap.sec", 0, 1 },
+		{"kon_ermac_ap.sec", 0, 1 },
+		{"kon_frost_ap.sec", 0, 1 },
+		{"kon_hotaru_ap.sec", 0, 1 },
+		{"kon_jade_ap.sec", 0, 1 },
+		{"kon_jax_ap.sec", 0, 1 },
+		{"kon_kang_ap.sec", 0, 1 },
+		{"kon_kenshi_ap.sec", 0, 1 },
+		{"kon_kira_ap.sec", 0, 1 },
+		{"kon_kitana_ap.sec", 0, 1 },
+		{"kon_kobra_ap.sec", 0, 1 },
+		{"kon_kunglao_ap.sec", 0, 1 },
+		{"kon_limei_ap.sec", 0, 1 },
+		{"kon_mileena_ap.sec", 0, 1 },
+		{"kon_mokap_ap.sec", 0, 1 },
+		{"kon_nightwolf_ap.sec", 0, 1 },
+		{"kon_noob_ap.sec", 0, 1 },
+		{"kon_reiko_ap.sec", 0, 1 },
+		{"kon_quanchi_ap.sec", 0, 1 },
+		{"kon_sareena_ap.sec", 0, 1 },
+		{"kon_scorpion_ap.sec", 0, 1 },
+		{"kon_shangmk5_ap.sec", 0, 1 },
+		{"kon_sindel_ap.sec", 0, 1 },
+		{"kon_smoke_ap.sec", 0, 1 },
+		{"kon_sonya_ap.sec", 0, 1 },
+		{"kon_subzero_ap.sec", 0, 1 },
+		{"kon_tanya_ap.sec", 0, 1 },
+		{"kon_cyrax_ap.sec", 0, 1 },
+		{"kon_dairou_ap.sec", 0, 1 },
+		{"kon_raidenmk5_ap.sec", 0, 1},
+		{"kon_raidenmk6_ap.sec", 0, 1 },
+		{"kon_darrius_ap.sec", 0, 1 },
+		{"kon_kabal_ap.sec", 0, 1 },
+		{"kon_shaok_ap.sec", 0, 1 },
+		{"kon_havik_ap.sec", 0, 1 },
+		{"kon_havika_ap.sec", 0, 1 },
+		{"kon_goro_ap.sec", 0, 1 },
+		{"kon_kang_lvng_ap.sec", 0, 1 },
+		{"kon_kang_dead_ap.sec", 0, 1 },
+		{"kon_shinnok_ap.sec", 0, 1 },
+		{"kon_nitara_ap.sec", 0, 1 },
+		{"kon_tremor_ap.sec", 0, 1 },
+		{"kon_freak_ap.sec", 0, 1 },
+		{"kon_rainmk2_ap.sec", 0, 1 },
+		{"kon_noob_alt_ap.sec", 0, 1 },
+		{"kon_smoke_alt_ap.sec", 0, 1 },
 };
 
 // I:\ps2dvd\art\kon_unique_npcs.ssf
@@ -99,45 +161,107 @@ struct mk_toc_entry kon_npc_file_table[KON_NPC_FILES + 1] = {
 		{&kon_npc_entry_table[23], 0, 123264  },       // kon_limei.sec
 		{&kon_npc_entry_table[24], 0, 98304    },      // kon_mileena.sec
 		{&kon_npc_entry_table[25], 0, 102016  },       // kon_mokap.sec
-		{&kon_npc_entry_table[26], 0, 113152  },       // kon_moloc.sec
-		{&kon_npc_entry_table[27], 0, 107392  },       // kon_nightwolf.sec
-		{&kon_npc_entry_table[28], 0, 89728    },      // kon_noob.sec
-		{&kon_npc_entry_table[29], 0, 95232    },      // kon_rain.sec
-		{&kon_npc_entry_table[30], 0, 106880   },      // kon_reiko.sec
-		{&kon_npc_entry_table[31], 0, 99456   },       // kon_quanchi.sec
-		{&kon_npc_entry_table[32], 0, 95616   },       // kon_reptile.sec
-		{&kon_npc_entry_table[33], 0, 102784  },       // kon_sareena.sec
-		{&kon_npc_entry_table[34], 0, 105472  },       // kon_scorpion.sec
-		{&kon_npc_entry_table[35], 0, 110208  },       // kon_shangmk5.sec
-		{&kon_npc_entry_table[36], 0, 103936  },       // kon_sindel.sec
-		{&kon_npc_entry_table[37], 0, 156544   },      // kon_smoke.sec
-		{&kon_npc_entry_table[38], 0, 105984  },       // kon_sonya.sec
-		{&kon_npc_entry_table[39], 0, 105600   },      // kon_stryker.sec
-		{&kon_npc_entry_table[40], 0, 102016  },       // kon_subzero.sec
-		{&kon_npc_entry_table[41], 0, 114816  },       // kon_tanya.sec
-		{&kon_npc_entry_table[42], 0, 128384  },       // kon_cyrax.sec
-		{&kon_npc_entry_table[43], 0, 128384   },      // kon_sektor.sec
-		{&kon_npc_entry_table[44], 0, 121728  },       // kon_dairou.sec
-		{&kon_npc_entry_table[45], 0, 118272   },      // kon_raidenmk5.sec
-		{&kon_npc_entry_table[46], 0, 122880  },       // kon_raidenmk6.sec
-		{&kon_npc_entry_table[47], 0, 100864   },      // kon_darrius.sec
-		{&kon_npc_entry_table[48], 0, 119424  },       // kon_kabal.sec
-		{&kon_npc_entry_table[49], 0, 128256   },      // kon_shaok.sec
-		{&kon_npc_entry_table[50], 0, 127488  },       // kon_havik.sec
-		{&kon_npc_entry_table[51], 0, 97024   },       // kon_havika.sec
-		{&kon_npc_entry_table[52], 0, 106752  },       // kon_goro.sec
-		{&kon_npc_entry_table[53], 0, 107008  },       // kon_sheeva.sec
-		{&kon_npc_entry_table[54], 0, 124672  },       // kon_kintaro.sec
-		{&kon_npc_entry_table[55], 0, 117632   },      // kon_motaro.sec
-		{&kon_npc_entry_table[56], 0, 104704   },      // kon_kang_lvng.sec
-		{&kon_npc_entry_table[57], 0, 104704  },       // kon_kang_dead.sec
-		{&kon_npc_entry_table[58], 0, 102528  },       // kon_shinnok.sec
-		{&kon_npc_entry_table[59], 0, 116864   },      // kon_nitara.sec
-		{&kon_npc_entry_table[60], 0, 103552   },      // kon_khameleon.sec
-		{&kon_npc_entry_table[61], 0, 114304  },       // kon_mavado.sec
-		{&kon_npc_entry_table[62], 0, 112000  },       // kon_spec_forc.sec
-		{&kon_npc_entry_table[63], 0, 94080    },      // kon_meat.sec
-		{&kon_npc_entry_table[64], 0, 95232    },      // kon_tremor.sec
+		{&kon_npc_entry_table[26], 0, 107392  },       // kon_nightwolf.sec
+		{&kon_npc_entry_table[27], 0, 89728    },      // kon_noob.sec
+		{&kon_npc_entry_table[28], 0, 95232    },      // kon_rain.sec
+		{&kon_npc_entry_table[29], 0, 106880   },      // kon_reiko.sec
+		{&kon_npc_entry_table[30], 0, 99456   },       // kon_quanchi.sec
+		{&kon_npc_entry_table[31], 0, 95616   },       // kon_reptile.sec
+		{&kon_npc_entry_table[32], 0, 102784  },       // kon_sareena.sec
+		{&kon_npc_entry_table[33], 0, 105472  },       // kon_scorpion.sec
+		{&kon_npc_entry_table[34], 0, 110208  },       // kon_shangmk5.sec
+		{&kon_npc_entry_table[35], 0, 103936  },       // kon_sindel.sec
+		{&kon_npc_entry_table[36], 0, 156544   },      // kon_smoke.sec
+		{&kon_npc_entry_table[37], 0, 105984  },       // kon_sonya.sec
+		{&kon_npc_entry_table[38], 0, 105600   },      // kon_stryker.sec
+		{&kon_npc_entry_table[39], 0, 102016  },       // kon_subzero.sec
+		{&kon_npc_entry_table[40], 0, 114816  },       // kon_tanya.sec
+		{&kon_npc_entry_table[41], 0, 128384  },       // kon_cyrax.sec
+		{&kon_npc_entry_table[42], 0, 128384   },      // kon_sektor.sec
+		{&kon_npc_entry_table[43], 0, 121728  },       // kon_dairou.sec
+		{&kon_npc_entry_table[44], 0, 118272   },      // kon_raidenmk5.sec
+		{&kon_npc_entry_table[45], 0, 122880  },       // kon_raidenmk6.sec
+		{&kon_npc_entry_table[46], 0, 100864   },      // kon_darrius.sec
+		{&kon_npc_entry_table[47], 0, 119424  },       // kon_kabal.sec
+		{&kon_npc_entry_table[48], 0, 128256   },      // kon_shaok.sec
+		{&kon_npc_entry_table[49], 0, 127488  },       // kon_havik.sec
+		{&kon_npc_entry_table[50], 0, 97024   },       // kon_havika.sec
+		{&kon_npc_entry_table[51], 0, 106752  },       // kon_goro.sec
+		{&kon_npc_entry_table[52], 0, 107008  },       // kon_sheeva.sec
+		{&kon_npc_entry_table[53], 0, 124672  },       // kon_kintaro.sec
+		{&kon_npc_entry_table[54], 0, 117632   },      // kon_motaro.sec
+		{&kon_npc_entry_table[55], 0, 104704   },      // kon_kang_lvng.sec
+		{&kon_npc_entry_table[56], 0, 104704  },       // kon_kang_dead.sec
+		{&kon_npc_entry_table[57], 0, 102528  },       // kon_shinnok.sec
+		{&kon_npc_entry_table[58], 0, 116864   },      // kon_nitara.sec
+		{&kon_npc_entry_table[59], 0, 114304  },       // kon_mavado.sec
+		{&kon_npc_entry_table[60], 0, 112000  },       // kon_spec_forc.sec
+		{&kon_npc_entry_table[61], 0, 94080    },      // kon_meat.sec
+		{&kon_npc_entry_table[62], 0, 95232    },      // kon_tremor.sec
+		{&kon_npc_entry_table[63], 0, 95232    },      // kon_subzeroumk3.sec
+		{&kon_npc_entry_table[64], 0, 95232    },      // kon_ermacumk3.sec
+		{&kon_npc_entry_table[65], 0, 128384   },      // kon_cyber_subzero.sec
+		{&kon_npc_entry_table[66], 0, 116480   },      // kon_freak.sec
+		{&kon_npc_entry_table[67], 0, 104704  },       // kon_torch.sec
+		{&kon_npc_entry_table[68], 0, 95616   },       // kon_rainmk2.sec
+		{&kon_npc_entry_table[69], 0, 89728   },       // kon_noob_alt.sec
+		{&kon_npc_entry_table[70], 0, 93696   },       // kon_smoke_alt.sec
+		{&kon_npc_entry_table[71], 0, 118272  },       // kon_raidenmk5_dark.sec
+		{&kon_npc_entry_table[72], 0, 104704  },       // kon_hornbuckle.sec
+		{&kon_npc_entry_table[73], 0, 104704  },       // kon_hornbuckle_dead.sec
+		{&kon_npc_entry_table[74], 0, 122880  },       // kon_raidenmk6_light.sec
+		{&kon_npc_entry_table[75], 0, 128384   },      // kon_sektor_te.sec
+		{&kon_npc_entry_table[76], 0,  104576   },       // kon_ashrah_ap.sec
+		{&kon_npc_entry_table[77], 0,  119296  },        // kon_baraka_ap.sec
+		{&kon_npc_entry_table[78], 0,  90496   },        // kon_blaze_ap.sec
+		{&kon_npc_entry_table[79], 0,  125312   },       // kon_boraicho_ap.sec
+		{&kon_npc_entry_table[80], 0,  108544  },        // kon_cage_ap.sec
+		{&kon_npc_entry_table[81], 0,  99968   },        // kon_drahmin_ap.sec
+		{&kon_npc_entry_table[82], 0,  94336    },       // kon_ermac_ap.sec
+		{&kon_npc_entry_table[83], 0,  97920    },       // kon_frost_ap.sec
+		{&kon_npc_entry_table[84], 0, 114560  },       // kon_hotaru_ap.sec
+		{&kon_npc_entry_table[85], 0, 108416  },       // kon_jade_ap.sec
+		{&kon_npc_entry_table[86], 0, 102656  },       // kon_jax_ap.sec
+		{&kon_npc_entry_table[87], 0, 104576   },      // kon_kang_ap.sec
+		{&kon_npc_entry_table[88], 0, 100224  },       // kon_kenshi_ap.sec
+		{&kon_npc_entry_table[89], 0, 114176  },       // kon_kira_ap.sec
+		{&kon_npc_entry_table[90], 0, 94848   },       // kon_kitana_ap.sec
+		{&kon_npc_entry_table[91], 0, 107008   },      // kon_kobra_ap.sec
+		{&kon_npc_entry_table[92], 0, 108800  },       // kon_kunglao_ap.sec
+		{&kon_npc_entry_table[93], 0, 123264  },       // kon_limei_ap.sec
+		{&kon_npc_entry_table[94], 0, 98304    },      // kon_mileena_ap.sec
+		{&kon_npc_entry_table[95], 0, 102016  },       // kon_mokap_ap.sec
+		{&kon_npc_entry_table[96], 0, 107392  },       // kon_nightwolf_ap.sec
+		{&kon_npc_entry_table[97], 0, 89728    },      // kon_noob_ap.sec
+		{&kon_npc_entry_table[98], 0, 106880   },      // kon_reiko_ap.sec
+		{&kon_npc_entry_table[99], 0, 99456   },       // kon_quanchi_ap.sec
+		{&kon_npc_entry_table[100], 0, 102784  },       // kon_sareena_ap.sec
+		{&kon_npc_entry_table[101], 0, 105472  },       // kon_scorpion_ap.sec
+		{&kon_npc_entry_table[102], 0, 110208  },       // kon_shangmk5_ap.sec
+		{&kon_npc_entry_table[103], 0, 103936  },       // kon_sindel_ap.sec
+		{&kon_npc_entry_table[104], 0, 156544   },      // kon_smoke_ap.sec
+		{&kon_npc_entry_table[105], 0, 105984  },       // kon_sonya_ap.sec
+		{&kon_npc_entry_table[106], 0, 102016  },       // kon_subzero_ap.sec
+		{&kon_npc_entry_table[107], 0, 114816  },       // kon_tanya_ap.sec
+		{&kon_npc_entry_table[108], 0, 128384  },       // kon_cyrax_ap.sec
+		{&kon_npc_entry_table[109], 0, 121728  },       // kon_dairou_ap.sec
+		{&kon_npc_entry_table[110], 0, 118272 },       // kon_raidenmk5_dark.sec
+		{&kon_npc_entry_table[111], 0, 122880 },       // kon_raidenmk6_ap.sec
+		{&kon_npc_entry_table[112], 0, 100864 },      // kon_darrius_ap.sec
+		{&kon_npc_entry_table[113], 0, 119424 },       // kon_kabal_ap.sec
+		{&kon_npc_entry_table[114], 0, 128256 },      // kon_shaok_ap.sec
+		{&kon_npc_entry_table[115], 0, 127488 },       // kon_havik_ap.sec
+		{&kon_npc_entry_table[116], 0, 97024 },       // kon_havika_ap.sec
+		{&kon_npc_entry_table[117], 0, 106752 },       // kon_goro_ap.sec
+		{&kon_npc_entry_table[118], 0, 104704 },      // kon_kang_lvng_ap.sec
+		{&kon_npc_entry_table[119], 0, 104704 },       // kon_kang_dead_ap.sec
+		{&kon_npc_entry_table[120], 0, 102528 },       // kon_shinnok_ap.sec
+		{&kon_npc_entry_table[121], 0, 116864 },      // kon_nitara_ap.sec
+		{&kon_npc_entry_table[122], 0, 95232 },      // kon_tremor_ap.sec
+		{&kon_npc_entry_table[123], 0, 116480 },      // kon_freak_ap.sec
+		{&kon_npc_entry_table[124], 0, 95616 },       // kon_rainmk2_ap.sec
+		{&kon_npc_entry_table[125], 0, 89728 },       // kon_noob_alt_ap.sec
+		{&kon_npc_entry_table[126], 0, 93696 },       // kon_smoke_alt_ap.sec
 		{0,0,0}
 };
 

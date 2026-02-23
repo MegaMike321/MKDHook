@@ -21,6 +21,9 @@ stages\acidbath.o \
 stages\katakombs.o \
 stages\darkprison.o \
 stages\teststage.o \
+stages\portal.o \
+stages\skytemple.o \
+stages\courtyard.o \
 characters\mkda_kano.o \
 characters\mkda_mokap.o \
 characters\mkda_blaze.o \
@@ -55,6 +58,8 @@ characters\sektor.o \
 characters\cyrax.o \
 characters\reiko.o \
 characters\tremor.o \
+characters\mileena.o \
+characters\tanya.o \
 characters\character_list.o \
 misc\pselect.o \
 misc\misc_anims.o \

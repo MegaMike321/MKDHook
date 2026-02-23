@@ -71,14 +71,22 @@ struct char_info_entry pCharTable[TOTAL_CHARACTERS] = {
 	{"SEKTOR"	, (int)&sektor_file_table	, (int)&sektor_alt_file_table	,"sektor.mko"},
 	{"RAIN"	, (int)&rain_file_table	, (int)&rain_alt_file_table	,"rain.mko"},
 	{"NITARA"	, (int)&nitara_file_table	, (int)&nitara_alt_file_table	,"nitara.mko"},
-	{"TREMOR"	, (int)&tremor_file_table	, (int)&tremor_file_table	,"tremor.mko"},
+	{"TREMOR"	, (int)&tremor_file_table	, (int)&tremor_alt_file_table	,"tremor.mko"},
 	{"CYRAX"	, (int)&cyrax_file_table	, (int)&cyrax_alt_file_table	,"cyrax.mko"},
 	{"REIKO"	, (int)&reiko_file_table	, (int)&reiko_alt_file_table	,"reiko.mko"},
 	{"RAIN"	, (int)&rain2_file_table	, (int)&rain2_file_table	,"rain.mko"},
 	{"SCORPION"	, (int)&scorpion2_file_table	, (int)&scorpion2_file_table	,"scorpion.mko"},
 	{"SUB-ZERO"	, (int)&subzero2_file_table	, (int)&subzero2_alt_file_table	,"subzero.mko"},
 	{"ERMAC"	, (int)&ermac2_file_table	, (int)&ermac2_file_table	,"ermac.mko"},
-	{"RAIDEN"	, (int)&raiden2_file_table	, (int)&raiden2_file_table	,"raiden.mko"},
+	{"RAIDEN"	, (int)&raiden2_file_table	, (int)&raiden2_alt_file_table	,"raiden.mko"},
+	{"CYBER SUB-ZERO"	, (int)&subzero3_file_table	, (int)&subzero3_alt_file_table	,"subzero.mko"},
+	{"LIU KANG"	, (int)&liukang2_alt_file_table	, (int)&liukang2_file_table	,"liukang.mko"},
+	{"CYBER SUB-ZERO"	, (int)&subzero4_file_table	, (int)&subzero4_file_table	,"subzero.mko"},
+	{"HORNBUCKLE"	, (int)&liukang3_alt_file_table	, (int)&liukang3_file_table	,"liukang.mko"},
+	{"RAIDEN"	, (int)&raiden3_file_table	, (int)&raiden3_alt_file_table	,"raiden.mko"},
+	{"BLAZE"	, (int)&blaze2_file_table	, (int)&blaze2_file_table		,"blaze.mko"},
+	{"CYRAX"	, (int)&cyrax2_file_table	, (int)&cyrax2_alt_file_table	,"cyrax.mko"},
+	{"SEKTOR"	, (int)&sektor2_file_table	, (int)&sektor2_file_table	,"sektor.mko"},
 };
 
 
@@ -108,7 +116,7 @@ character_timers pTimerTable[CHARACTER_TIMERS + 1] = {
 	{HAVIK, 650.0, 690.0, 390.0, 120.0, 60.0, 120.0, 5.0, 70.0},
 	{SUBZERO, 700.0, 860.0, 330.0, 150.0, 60.0, 120.0, 5.0, 40.0},
 	{TANYA, 530.0, 560.0, 550.0, 120.0, 60.0, 120.0, 5.0, 70.0},
-	
+
 	// mku timers
 	{KITANA, 1100.0, 1100.0, 330.0, 120.0, 60.0, 120.0, 5.0, 70.0},
 	{GORO, 592.0, 600.0, 495.0, 120.0, 60.0, 120.0, 5.0, 140.0},
@@ -121,6 +129,11 @@ character_timers pTimerTable[CHARACTER_TIMERS + 1] = {
 	{SUBZERO2, 700.0, 860.0, 330.0, 150.0, 60.0, 120.0, 5.0, 40.0},
 	{ERMAC2, 700.0, 650.0, 580.0, 120.0, 60.0, 120.0, 5.0, 90.0},
 	{RAIDEN2, 370.0, 390.0, 330.0, 120.0, 60.0, 120.0, 5.0, 120.0},
+	{SUBZERO3, 700.0, 860.0, 330.0, 150.0, 60.0, 120.0, 5.0, 40.0},
+	{LIU_KANG2, 490.0, 760.0, 400.0, 120.0, 60.0, 120.0, 5.0, 120.0},
+	{SUBZERO4, 700.0, 860.0, 330.0, 150.0, 60.0, 120.0, 5.0, 40.0},
+	{LIU_KANG3, 490.0, 760.0, 400.0, 120.0, 60.0, 120.0, 5.0, 120.0},
+	{RAIDEN3, 370.0, 390.0, 330.0, 120.0, 60.0, 120.0, 5.0, 120.0},
 
 	{-1, 1500.0, 1500.0, 1500.0, 120.0, 60.0, 120.0, 5.0, 140.0}
 };
@@ -156,14 +169,14 @@ void init_character_hook()
 	init_character_tocs();
 
 	static int val = 0;
-	
+
 	patchShort(0x1326B4, TOTAL_CHARACTERS);
 	patchShort(0x1326F0, TOTAL_CHARACTERS);
 	patchShort(0x130E08, TOTAL_CHARACTERS);
 	patchShort(0x131088, TOTAL_CHARACTERS);
 	patchShort(0x193880, TOTAL_CHARACTERS);
 	patchShort(0x40BEA4, TOTAL_CHARACTERS);
-	
+
 	{
 		val = (int)&pCharTable[0];
 		patchInt(0x16D3AC, lui(v0, HIWORD(val)));
@@ -219,7 +232,7 @@ void init_character_hook()
 		patchInt(0x131098 + 4, ori(v0, v0, LOWORD(val)));
 
 	}
-	
+
 	{
 		val = (int)&pTimerTable[0];
 		patchInt(0x16CC94, lui(v0, HIWORD(val)));
@@ -240,7 +253,7 @@ void init_character_hook()
 		val += 4;
 		patchInt(0x17036C, lui(v0, HIWORD(val)));
 		patchInt(0x170374, ori(v0, v0, LOWORD(val)));
-		
+
 		val += 4;
 		patchInt(0x17038C, lui(v0, HIWORD(val)));
 		patchInt(0x170394, ori(v0, v0, LOWORD(val)));
@@ -269,7 +282,7 @@ void init_character_hook()
 		patchInt(0x16D350, lui(v0, HIWORD(val)));
 		patchInt(0x16D358, ori(v0, v0, LOWORD(val)));
 	}
-	
+
 
 
 	makeJal(0x132750, hook_character_lock_status);
@@ -297,6 +310,7 @@ void init_character_tocs()
 	init_scorpion_toc();
 	init_subzero_toc();
 	init_ermac_toc();
+	init_liukang_toc();
 	init_raiden_toc();
 	init_mkda_kano_toc();
 	init_mkda_mokap_toc();
@@ -321,6 +335,8 @@ void init_character_tocs()
 	init_tremor_toc();
 	init_cyrax_toc();
 	init_reiko_toc();
+	init_mileena_toc();
+	init_tanya_toc();
 }
 
 int hook_character_lock_status(int id, int param)

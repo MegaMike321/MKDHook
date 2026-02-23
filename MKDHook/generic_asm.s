@@ -39,6 +39,10 @@ freeze_reaction_patch:
 	beq     $v0, $a1, 1f
 	li		$a1, 65 #SUBZERO2
 	beq     $v0, $a1, 1f
+	li		$a1, 68 #SUBZERO3
+	beq     $v0, $a1, 1f
+	li		$a1, 70 #SUBZERO4
+	beq     $v0, $a1, 1f
 	j		0x215D98
 
 	1:
@@ -52,6 +56,10 @@ freeze_reaction_patchP2:
 	li		$a1, 47 #FROST
 	beq     $v1, $a1, 1f
 	li		$a1, 65 #SUBZERO2
+	beq     $v1, $a1, 1f
+	li		$a1, 68 #SUBZERO3
+	beq     $v1, $a1, 1f
+	li		$a1, 70 #SUBZERO4
 	beq     $v1, $a1, 1f
 	j		0x215DA8
 

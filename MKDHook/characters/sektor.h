@@ -24,6 +24,12 @@ extern struct mk_toc_entry sektor_file_table[SEKTOR_FILES + 1];
 extern struct mk_file_entry sektor_alt_entry_table[SEKTOR_FILES];
 extern struct mk_toc_entry sektor_alt_file_table[SEKTOR_FILES + 1];
 
+extern struct mk_file_entry sektor2_entry_table[SEKTOR_FILES];
+extern struct mk_toc_entry sektor2_file_table[SEKTOR_FILES + 1];
+
+extern struct mk_file_entry sektor2_alt_entry_table[SEKTOR_FILES];
+extern struct mk_toc_entry sektor2_alt_file_table[SEKTOR_FILES + 1];
+
 extern struct scan_action scan_sektor_1;
 extern struct scan_action scan_sektor_3;
 extern struct scan_action scan_sektor_4;

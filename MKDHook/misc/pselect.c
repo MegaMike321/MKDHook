@@ -49,14 +49,15 @@ struct mk_file_entry pselect_entry_table[PSELECT_FILES] = {
 	{"body_sektor_alt.sec"	,0, 1},
 	{"body_nitara_alt.sec"	,0, 1},
 	{"body_cyrax_alt.sec"	,0, 1},
+	{"body_tremor_alt.sec"	,0, 1},
 };
 
 // I:\ps2dvd\art\pselect.ssf
 struct mk_toc_entry pselect_file_table[PSELECT_FILES + 1] = {
 		{&pselect_entry_table[0]	,0,0 },
 
-		{&pselect_entry_table[1]	,0,4536960}, // pselect
-		{&pselect_entry_table[2]	,0,2138112}, // bg
+		{&pselect_entry_table[1]	,0,4708096}, // pselect
+		{&pselect_entry_table[2]	,0,2576896}, // bg
 		{&pselect_entry_table[3]	,0,1528960}, // pz
 		// ALT RENDERS
 		{&pselect_entry_table[4]	,0,67456},  // ALT
@@ -100,6 +101,7 @@ struct mk_toc_entry pselect_file_table[PSELECT_FILES + 1] = {
 		{&pselect_entry_table[42]	,0,67456},  // sektor_alt
 		{&pselect_entry_table[43]	,0,67456},  // nitara_alt
 		{&pselect_entry_table[44]	,0,67456},  // cyrax_alt
+		{&pselect_entry_table[45]   ,0,67456},  // tremor_alt
 		{0,0,0}
 };
 

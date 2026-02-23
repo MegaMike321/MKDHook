@@ -14,6 +14,8 @@
 #include "ermac.h"
 #include "noob.h"
 #include "raiden.h"
+#include "mileena.h"
+#include "tanya.h"
 
 
 // tweaks

@@ -104,7 +104,7 @@ struct mk_toc_entry cyrax_file_table[CYRAX_FILES + 1] = {
 		{&cyrax_entry_table[1]		,0,		531072 },	// cyrax.sec             
 		{&cyrax_entry_table[2]		,0,		531072 },	// cyrax_ap.sec        
 		{&cyrax_entry_table[3]		,0,		21920  },	// cyrax.mko   
-		{&cyrax_entry_table[4]		,0,		392320 },	// sh_cyrax.sec           
+		{&cyrax_entry_table[4]		,0,		392448 },	// sh_cyrax.sec  //392320         
 		{&cyrax_entry_table[5]		,0,		10164  },	// fight_fx.mko         
 		{&cyrax_entry_table[6]		,0,		21368  },	// blood_fx.mko         
 		{&cyrax_entry_table[7]		,0,		14112  },	// cyrax_fx.mko          
@@ -130,7 +130,7 @@ struct mk_toc_entry cyrax_alt_file_table[CYRAX_FILES + 1] = {
 		{&cyrax_alt_entry_table[1]		,0,		582528 },	// cyrax_alt.sec             
 		{&cyrax_alt_entry_table[2]		,0,		582528 },	// cyrax_alt_ap.sec        
 		{&cyrax_alt_entry_table[3]		,0,		21920  },	// cyrax.mko   
-		{&cyrax_alt_entry_table[4]		,0,		390016 },	// sh_cyrax.sec           
+		{&cyrax_alt_entry_table[4]		,0,		390144 },	// sh_cyrax.sec           
 		{&cyrax_alt_entry_table[5]		,0,		10164  },	// fight_fx.mko         
 		{&cyrax_alt_entry_table[6]		,0,		21368  },	// blood_fx.mko         
 		{&cyrax_alt_entry_table[7]		,0,		14112  },	// cyrax_fx.mko          
@@ -149,7 +149,104 @@ struct mk_toc_entry cyrax_alt_file_table[CYRAX_FILES + 1] = {
 		{0,0,0}
 };
 
+struct mk_file_entry cyrax2_entry_table[CYRAX_FILES] = {
+	{"cyrax2.ssf"	,0, 4},
 
+	{"cyrax.sec",0, 1},
+	{"cyrax_ap.sec",0, 1},
+	{"cyrax.mko",0, 3},
+	{"sh_cyrax.sec",0, 1},
+	{"fight_fx.mko",0,3},
+	{"blood_fx.mko",0,3},
+	{"cyrax_fx.mko",0,3},
+	{"ninjitsu.mko",0, 3},
+	{"style_ninjitsu.sec",0,1},
+	{"sambo.mko",0, 3},
+	{"style_sambo.sec",0,1},
+	{"pulseblade.mko",0, 3},
+	{"style_pulseblade.sec",0,1},
+	{"cyrax_anims.sec",0, 2},
+	{"ninjitsu_anims.sec",0, 2},
+	{"sambo_anims.sec",0, 2},
+	{"pulseblade_anims.sec",0,2},
+	{"pz_noob_anims.sec",0,2},
+};
+
+struct mk_file_entry cyrax2_alt_entry_table[CYRAX_FILES] = {
+	{"cyrax2_alt.ssf"	,0, 4},
+
+	{"cyrax_alt.sec",0, 1},
+	{"cyrax_alt_ap.sec",0, 1},
+	{"cyrax.mko",0, 3},
+	{"sh_cyrax.sec",0, 1},
+	{"fight_fx.mko",0,3},
+	{"blood_fx.mko",0,3},
+	{"cyrax_fx.mko",0,3},
+	{"ninjitsu.mko",0, 3},
+	{"style_ninjitsu.sec",0,1},
+	{"sambo.mko",0, 3},
+	{"style_sambo.sec",0,1},
+	{"pulseblade.mko",0, 3},
+	{"style_pulseblade.sec",0,1},
+	{"cyrax_alt_anims.sec",0, 2},
+	{"ninjitsu_anims.sec",0, 2},
+	{"sambo_anims.sec",0, 2},
+	{"pulseblade_anims.sec",0,2},
+	{"pz_noob_anims.sec",0,2},
+};
+
+
+// I:\ps2dvd\art\cyrax2.ssf
+struct mk_toc_entry cyrax2_file_table[CYRAX_FILES + 1] = {
+		{&cyrax2_entry_table[0]	,0,0 },
+
+		{&cyrax2_entry_table[1]		,0,		616832 },	// cyrax.sec             
+		{&cyrax2_entry_table[2]		,0,		616832 },	// cyrax_ap.sec        
+		{&cyrax2_entry_table[3]		,0,		21920  },	// cyrax.mko   
+		{&cyrax2_entry_table[4]		,0,		392320 },	// sh_cyrax.sec           
+		{&cyrax2_entry_table[5]		,0,		10164  },	// fight_fx.mko         
+		{&cyrax2_entry_table[6]		,0,		21368  },	// blood_fx.mko         
+		{&cyrax2_entry_table[7]		,0,		14112  },	// cyrax_fx.mko          
+		{&cyrax2_entry_table[8] 		,0,		13120  },	// ninjitsu.mko         
+		{&cyrax2_entry_table[9]		,0,		10112  },	// style_ninjitsu.sec   
+		{&cyrax2_entry_table[10]		,0,		7040   },	// sambo.mko        
+		{&cyrax2_entry_table[11]		,0,		10112  },	// style_sambo.sec  
+		{&cyrax2_entry_table[12]		,0,		12000  },	// pulseblade.mko        
+		{&cyrax2_entry_table[13]		,0,		10112  },	// style_pulseblade.sec  
+		{&cyrax2_entry_table[14]		,0,		68224  },	// cyrax_anims.sec       
+		{&cyrax2_entry_table[15]		,0,		161536 },	// ninjitsu_anims.sec   
+		{&cyrax2_entry_table[16]		,0,		197376 },	// sambo_anims.sec  
+		{&cyrax2_entry_table[17]		,0,		219648 },	// pulseblade_anims.sec  
+		{&cyrax2_entry_table[18]		,0,		53120  },	// pz_noob_anims.sec
+
+		{0,0,0}
+};
+
+// I:\ps2dvd\art\cyrax2_alt.ssf
+struct mk_toc_entry cyrax2_alt_file_table[CYRAX_FILES + 1] = {
+		{&cyrax2_alt_entry_table[0]	,0,0 },
+
+		{&cyrax2_alt_entry_table[1]		,0,		464768 },	// cyrax_alt.sec             
+		{&cyrax2_alt_entry_table[2]		,0,		464768 },	// cyrax_alt_ap.sec        
+		{&cyrax2_alt_entry_table[3]		,0,		21920  },	// cyrax.mko   
+		{&cyrax2_alt_entry_table[4]		,0,		390016 },	// sh_cyrax.sec           
+		{&cyrax2_alt_entry_table[5]		,0,		10164  },	// fight_fx.mko         
+		{&cyrax2_alt_entry_table[6]		,0,		21368  },	// blood_fx.mko         
+		{&cyrax2_alt_entry_table[7]		,0,		14112  },	// cyrax_fx.mko          
+		{&cyrax2_alt_entry_table[8] 		,0,		13120  },	// ninjitsu.mko         
+		{&cyrax2_alt_entry_table[9]		,0,		10112  },	// style_ninjitsu.sec   
+		{&cyrax2_alt_entry_table[10]		,0,		7040   },	// sambo.mko        
+		{&cyrax2_alt_entry_table[11]		,0,		10112  },	// style_sambo.sec  
+		{&cyrax2_alt_entry_table[12]		,0,		11872  },	// pulseblade.mko        
+		{&cyrax2_alt_entry_table[13]		,0,		10112  },	// style_pulseblade.sec  
+		{&cyrax2_alt_entry_table[14]		,0,		68224  },	// cyrax_alt_anims.sec       
+		{&cyrax2_alt_entry_table[15]		,0,		161536 },	// ninjitsu_anims.sec   
+		{&cyrax2_alt_entry_table[16]		,0,		197376 },	// sambo_anims.sec  
+		{&cyrax2_alt_entry_table[17]		,0,		219648 },	// pulseblade_anims.sec  
+		{&cyrax2_alt_entry_table[18]		,0,		53120  },	// pz_noob_anims.sec
+
+		{0,0,0}
+};
 
 void init_cyrax_toc()
 {
@@ -188,6 +285,32 @@ void init_cyrax_toc()
 		baseSize += (cyrax_alt_file_table[i].size + 2048 - 1) & -2048;
 	}
 
+	baseSize = 2048;
+	for (int i = 0; i < CYRAX_FILES; i++)
+	{
+		cyrax2_entry_table[i].belong = &cyrax2_file_table[0];
+	}
+
+
+	for (int i = 1; i < CYRAX_FILES; i++)
+	{
+		cyrax2_file_table[i].previousSize = baseSize;
+		baseSize += (cyrax2_file_table[i].size + 2048 - 1) & -2048;
+	}
+
+	baseSize = 2048;
+
+	for (int i = 0; i < CYRAX_FILES; i++)
+	{
+		cyrax2_alt_entry_table[i].belong = &cyrax2_alt_file_table[0];
+	}
+
+
+	for (int i = 1; i < CYRAX_FILES; i++)
+	{
+		cyrax2_alt_file_table[i].previousSize = baseSize;
+		baseSize += (cyrax2_alt_file_table[i].size + 2048 - 1) & -2048;
+	}
 }
 
 void start_cyrax_bomb(int plrID)
@@ -276,7 +399,7 @@ void cyrax_cutter_update_status(int plrID, int object)
 		break;
 	}
 
-	
+
 }
 
 void cyrax_cutter_rotate(int plrID, int object)
@@ -321,11 +444,11 @@ void cyrax_cutter_hide(int plrID, int obj)
 
 	*(char*)(obj + 8) = *(char*)(obj + 8) & 0xFFFFFFBF | 0x40;
 
-	
+
 	*(float*)(obj + 240) = 0.0f;
 	*(float*)(obj + 244) = 0.0f;
 	*(float*)(obj + 248) = 0.0f;
-	
+
 }
 
 void cyrax_cutter_start(int plrID, int obj)

@@ -9,7 +9,7 @@
 #include "scripthook.h"
 int  current_select = 0;
 int  select_timer = 0;
-int  sound = 0; 
+int  sound = 0;
 
 int pselect_extra_text[2] = {};
 int pselect_alternate_palette_toggle[2] = {};
@@ -21,11 +21,18 @@ int pselect_extra_costume_toggle[24] = {};
 int pselect_toggle_extra_timer[2] = {};
 
 swap_entry pSwapTable[SELECT_SCREEN_EXTRA_NUM] = {
+	{LIU_KANG2, LIU_KANG},
+	{SHUJINKO_13, SHUJINKO},
 	{RAIN2, RAIN},
 	{SCORPION2, SCORPION},
 	{SUBZERO2, SUBZERO},
 	{ERMAC2, ERMAC},
 	{RAIDEN2, RAIDEN},
+	{SUBZERO4, SUBZERO3},
+	{BLAZE2, BLAZE},
+	{CYRAX2, CYRAX},
+	{SEKTOR2, SEKTOR},
+	{}
 };
 
 select_screen_entry pSelectTable[24] = {
@@ -36,20 +43,20 @@ select_screen_entry pSelectTable[24] = {
 	{BARAKA	, 77	, "HEAD_BARAKA"	, "HEAD_RANDOM"	, "BODY_BARAKA"	, "body_baraka_alt.sec"	, "3"	, "SILAT"	, "HUNG GAR"	, "BLADES"},
 	{SUBZERO	, 99	, "HEAD_SUBZERO"	, "HEAD_RANDOM"	, "BODY_SUBZERO"	, "body_subzero_alt.sec"	, "4"	, "SHOTOKAN"	, "DRAGON"	, "KORI BLADE"},
 	{HAVIK	, 82	, "HEAD_HAVIK"	, "HEAD_RANDOM"	, "BODY_HAVIK"	, "body_havik_alt.sec"	, "5"	, "SNAKE"	, "TANG SOO DO"	, "MORNING STAR"},
-	{SINDEL	, 97	, "HEAD_SINDEL"	, "HEAD_RANDOM"	, "BODY_SINDEL"	, "body_sindel_alt.sec"	, "3"	, "ZHA CHUAN"	, "FU JOW PAI"	, "KWAN DO"},
-	
+	{SINDEL	, 97	, "HEAD_SINDEL"	, "HEAD_RANDOM"	, "BODY_SINDEL"	, "body_sindel_alt.sec"	, "3"	, "ZHA CHUAN"	, "FU JOW PAI"	, "KWAN DAO"},
+
 	{RAIDEN	, 94	, "HEAD_RAIDEN"	, "HEAD_RANDOM"	, "BODY_RAIDEN"	, "body_raiden_alt.sec"	, "4"	, "NAN CHUAN"	, "JUJUTSU"	, "STAFF"},
 	{LI_MEI	, 89	, "HEAD_LIMEI"	, "HEAD_RANDOM"	, "BODY_LIMEI"	, "body_limei_alt.sec"	, "2"	, "MI ZONG"	, "LUI HE BA FA"	, "KUNLUN DAO"},
 	{KABAL	, 85	, "HEAD_KABAL"	, "HEAD_RANDOM"	, "BODY_KABAL"	, "body_kabal_alt.sec"	, "2"	, "SUN BIN"	, "GOJU RYU"	, "HOOK SWORDS"},
 	{ERMAC	, 81	, "HEAD_ERMAC"	, "HEAD_RANDOM"	, "BODY_ERMAC"	, "body_ermac_alt.sec"	, "4"	, "HUA CHUAN"	, "CHOY LEE FUT"	, "AXE"},
-	{NIGHTWOLF	, 92	, "HEAD_NIGHTWOLF"	, "HEAD_RANDOM"	, "BODY_NIGHTWOLF"	, "body_nightwolf_alt.sec"	, "4"	, "VAL TUDO"	, "TAE KWAN DO"	, "TOMAHAWKS"},
+	{NIGHTWOLF	, 92	, "HEAD_NIGHTWOLF"	, "HEAD_RANDOM"	, "BODY_NIGHTWOLF"	, "body_nightwolf_alt.sec"	, "4"	, "VALE TUDO"	, "TAE KWAN DO"	, "TOMAHAWKS"},
 	{BORAICHO	, 78	, "HEAD_BORAICHO"	, "HEAD_RANDOM"	, "BODY_BORAICHO"	, "body_boraicho_alt.sec"	, "4"	, "SUMO"	, "DRUNKEN FIST"	, "JOJUTSU"},
-	{NOOBSMOKE	, 102	, "HEAD_SMOKENOOB"	, "HEAD_RANDOM"	, "BODY_SMOKENOOB"	, "body_smokenoob_alt.sec"	, "5"	, "NOOB - MONKEY"	, "SMOKE - MI TZU"	, " "},
+	{NOOBSMOKE	, 102	, "HEAD_SMOKENOOB"	, "HEAD_RANDOM"	, "BODY_SMOKENOOB"	, "body_smokenoob_alt.sec"	, "5"	, "NOOB - MONKEY"	, "SMOKE - MI TZU"},
 	{TANYA	, 100	, "HEAD_TANYA"	, "HEAD_RANDOM"	, "BODY_TANYA"	, "body_tanya_alt.sec"	, "5"	, "ZI RAN MEN"	, "YUE CHUAN"	, "KOBU JUTSU"},
-	
+
 	{SHUJINKO	, 96	, "HEAD_SHUJINKO"	, "HEAD_RANDOM"	, "BODY_SHUJINKO"	, "body_shujinko_alt.sec"	, "5"	, "MANTIS"	, "SHAOLIN FIST"	, "DAN TIEN DAO"},
 	{HOTARU	, 83	, "HEAD_HOTARU"	, "HEAD_RANDOM"	, "BODY_HOTARU"	, "body_hotaru_alt.sec"	, "1"	, "BA SHAN FAN"	, "PI GUA"	, "NAGINATA"},
-	{ASHRAH	, 76	, "HEAD_ASHRA"	, "HEAD_RANDOM"	, "BODY_ASHRAH"	, "body_ashrah_alt.sec"	, "5"	, "CHOU JAIO"	, "BA GUA"	, "KRISS"},
+	{ASHRAH	, 76	, "HEAD_ASHRA"	, "HEAD_RANDOM"	, "BODY_ASHRAH"	, "body_ashrah_alt.sec"	, "5"	, "CHOU JAIO"	, "BA GUA"	, "KRIS"},
 	{DAIROU	, 79	, "HEAD_DAIROU"	, "HEAD_RANDOM"	, "BODY_DAIROU"	, "body_dairou_alt.sec"	, "5"	, "WING CHUN"	, "ESCRIMA"	, "AUTUMN DAO"},
 	{KOBRA	, 88	, "HEAD_KOBRA"	, "HEAD_RANDOM"	, "BODY_KOBRA"	, "body_kobra_alt.sec"	, "1"	, "SHORIN RYU"	, "KICKBOXING"	, "KALI STICKS"},
 	{DARRIUS	, 80	, "HEAD_DARRIUS"	, "HEAD_RANDOM"	, "BODY_DARRIUS"	, "body_darrius_alt.sec"	, "5"	, "SHINTO RYU"	, "LEOPARD"	, "GAUNTLETS"},
@@ -61,62 +68,59 @@ select_screen_entry pSelectTableNew[24] = {
 		{SONYA,  SOUND_SONYA_SELECT	, "HEAD_SONYA"	, "HEAD_RANDOM"	, "BODY_SONYA"	, "body_sonya_alt.sec"	, "1"	, "KENPO"	, "TAE KWON DO"	, "KALI STICKS"},
 		{KITANA, SOUND_KITANA_SELECT, "HEAD_KITANA"	, "HEAD_RANDOM"	, "BODY_KITANA"	, "body_kitana_alt.sec"	, "4"	, "EAGLE CLAW"	, "BA GUA"	, "STEEL FAN"},
 		{JAX,  SOUND_JAX_SELECT	, "HEAD_JAX"	, "HEAD_RANDOM"	, "BODY_JAX"	, "body_jax_alt.sec"	, "2"	, "MUAY THAI"	, "JUDO"	, "TONFA"},
-		
 		{ONAGA,  SOUND_ONAGA_SELECT	, "HEAD_DRAGONKING"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	,  "1"	, "DRAGON"	, ""	, ""},
 		{SHAO_KAHN, SOUND_SHAO_SELECT	, "HEAD_SHAO_KAHN"	, "HEAD_RANDOM"	, "BODY_SHAO_KAHN"	, "body_shaokahn_alt.sec"	, "2"	, "TAI TZU"	, "LUI HE"	, "WRATH HAMMER"},
 		{FROST,  SOUND_FROST_SELECT	, "HEAD_FROST"	, "HEAD_RANDOM"	, "BODY_FROST"	, "body_frost_alt.sec"	, "2"	, "TONG BEI"	, "YUAN YANG"	, "DAGGERS"},
-		
 		{BLAZE,  SOUND_BLAZE_SELECT	, "HEAD_BLAZE"	, "HEAD_RANDOM"	, "BODY_BLAZE"	, "body_blaze_alt.sec"	, "3"	, "HAPKIDO"	, "JEET KUNE DO"	, "XING YI"},
 		{GORO,  SOUND_GORO_SELECT	, "HEAD_GORO"	, "HEAD_RANDOM"	, "BODY_GORO"	, "body_goro_alt.sec"	, "3"	, "SHOKAN"	, "KUATAN"	, "DRAGON FANGS"},
+
 		{DRAHMIN, SOUND_DRAHMIN_SELECT	, "HEAD_DRAHMIN"	, "HEAD_RANDOM"	, "BODY_DRAHMIN"	, "body_drahmin_alt.sec"	, "2"	, "HUNG GAR"	, "WRESTLING"	, "IRON CLUB"},
-		
 		{SAREENA, SOUND_SAREENA_SELECT	, "HEAD_SAREENA"	, "HEAD_RANDOM"	, "BODY_SAREENA"	, "body_sareena_alt.sec"	, "3"	, "BAJI QUAN"	, "YUAN YANG"	, "DEMON FANG"},
 		{KUNG_LAO, SOUND_KUNG_LAO_SELECT	, "HEAD_KUNG_LAO"	, "HEAD_RANDOM"	, "BODY_KUNGLAO"	, "body_kung_alt.sec"	,	"2", "MANTIS"	, "SHAOLIN FIST"	, "BROADSWORD"},
 		{QUAN_CHI, SOUND_QUAN_SELECT	, "HEAD_QUAN"	, "HEAD_RANDOM"	, "BODY_QUAN"	, "body_quan_alt.sec"	, "4"	, "TANG SOO DO"	, "ESCRIMA"	, "BROADSWORDS"},
-		
 		{SHANG_TSUNG, SOUND_SHANG_TSUNG_SELECT	, "HEAD_SHANG_TSUNG"	, "HEAD_RANDOM"	, "BODY_SHANGTSUNG"	, "body_shang_alt.sec"	, "3"	, "SNAKE"	, "CRANE"	, "STRAIGHT SWORD"},
 		{CAGE,  SOUND_CAGE_SELECT	, "HEAD_CAGE"	, "HEAD_RANDOM"	, "BODY_CAGE"	, "body_cage_alt.sec",	"3", "SHORIN RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
 		{SEKTOR, SOUND_SEKTOR_SELECT	, "HEAD_SEKTOR"	, "HEAD_RANDOM"	, "BODY_SEKTOR"	, "body_sektor_alt.sec"	, "2"	, "NINJITSU"	, "SHUAI CHIAO"	, "PULSEBLADES"},
-
 		{CYRAX,  SOUND_CYRAX_SELECT	, "HEAD_CYRAX"	,"HEAD_RANDOM"	, "BODY_CYRAX"	, "body_cyrax_alt.sec"	, "3"	, "NINJITSU"	, "SAMBO"	, "PULSEBLADE"},
-		{0,  -1	, ""	, ""	, ""	, "NULL"	, ""	, ""	, ""	, ""},
-		{RAIN, SOUND_RAIN_SELECT	, "HEAD_RAIN"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_random_alt.sec"	, "3"	, "YUE CHUAN"	, "NAN CHUAN"	, "STORM SWORD"},	
 
+		{RAIDEN3	, 94	, ""	, ""	, "BODY_RAIDEN_LIGHT"	, "NULL"	, "4"	, "NAN CHUAN"	, "JUJUTSU"	, "STAFF"},
+		{RAIN, SOUND_RAIN_SELECT	, "HEAD_RAIN"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_random_alt.sec"	, "3"	, "YUE CHUAN"	, "NAN CHUAN"	, "STORM SWORD"},
 		{NITARA,  SOUND_NITARA_SELECT	, "HEAD_NITARA"	, "HEAD_RANDOM"	, "BODY_NITARA"	, "body_nitara_alt.sec"	, "3"	, "LEOPARD"	, "FU JOW PAI"	, "KAMA"},
-		{0,  -1	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, ""	, "NULL"	, ""	, ""	, ""	, ""},
-		{0,  -1	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, ""	, "NULL"	, ""	, ""	, ""	, ""},
-
+		{MONSTER,  SOUND_MONSTER_SELECT	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
+		{SUBZERO3,  99	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, "BODY_CYBERSUBZERO"	, "NULL"	, "4"	, "SHOTOKAN"	, "DRAGON"	, "KORI BLADE"},
 		{REIKO,  SOUND_REIKO_SELECT	,  "HEAD_REIKO"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_random_alt.sec"	, "4"	, "MIAN CHUAN"	, "SILAT"	, "CLUB"},
-		{TREMOR,  SOUND_TREMOR_SELECT	, "HEAD_TREMOR"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_random_alt.sec"	, "2"	, "WRESTLING"	, "SUN BIN"	, "ROCK ARMS"},
-		{0,  -1	, ""	, ""	, ""	, "NULL"	, ""	, ""	, ""	, ""},
+		{TREMOR,  SOUND_TREMOR_SELECT	, "HEAD_TREMOR"	, "HEAD_RANDOM"	, "BODY_TREMOR"	, "body_tremor_alt.sec"	, "2"	, "WRESTLING"	, "SUN BIN"	, "ROCK ARMS"},
+		{LIU_KANG3,  SOUND_HORNBUCKLE_SELECT	, "HEAD_HORNBUCKLE"	, "HEAD_RANDOM"	, "BODY_HORNBUCKLE"	, "NULL"	, "5"	, "JUN FAN"	, "PAO CHUI"	, "NUNCHAKU"},
 };
 
 #ifndef PS2_BUILD
 select_screen_entry pSelectTableNPC[24] = {
-		{MONSTER, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
-		{ONAGA,  13	, "HEAD_KOBRA_LOCKED"	, "HEAD_KOBRA_LOCKED"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	,  "1"	, "DRAGON"	, ""	, ""},
-		{SHUJINKO_13	, 96	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "5"	, "MANTIS"	, "SHAOLIN FIST"	, "DAN TIEN DAO"},
-		{MKDA_QUAN_CHI	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "4"	, "TANG SOO DO"	, "ESCRIMA"	, "BROADSWORD"},
-		{MKDA_SHANG_TSUNG	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "3"	, "SNAKE"	, "MANTIS"	, ""},
-		{MKDA_NITARA	, -1, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "5"	, "LEOPARD"	, "FU JOW PAI"	, "DRAGON TEETH"},
-		{MKDA_SONYA,  -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	,  "1"	, "KENPO"	, "TAE KWON DO"	, "KALI STICKS"},
-		{MKDA_CAGE	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
-		{MKDA_KUNG_LAO	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "2"	, "MANTIS"	, "SHAOLIN FIST"	, "BROADSWORD"},
-		{MKDA_DRAHMIN	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "5"	, ""	, ""	, "IRON CLUB"},
-		{MKDA_FROST	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "5"	, ""	, ""	, ""},
-		{MKDA_JAX	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "5"	, ""	, ""	, ""},
-		{MKDA_KITANA	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM" , "body_scorpion_alt.sec"	, "5"	, "JUN FAN"	, "PAO CHUI"	, "NUNCHAKU"},
-		{MKDA_RAIDEN	, -1	,	"HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM" , "body_scorpion_alt.sec"	, "4"	, "NAN CHUAN"	, "JUJUTSU"	, "STAFF"},
-		{SMOKE	, 98	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_SMOKE"	, "body_scorpion_alt.sec"	, "5"	, "MI TZU"	, ""	, ""},
-		{NOOB	, 93	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_NOOB2"	, "body_scorpion_alt.sec"	, "5"	, "MONKEY"	, ""	, ""},
-		{GHOST	, 90	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_GHOST" , "body_scorpion_alt.sec"	, "5"	, "JUN FAN"	, "PAO CHUI"	, "NUNCHAKU"},
-		{MKDA_KANO	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
-		{MKDA_MOKAP	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
-		{MKDA_BLAZE	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
-		{MONSTER,  -1	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
-		{MONSTER,  -1	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
-		{MONSTER,  -1	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
-		{MONSTER,  -1	, "HEAD_RANDOM"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "body_scorpion_alt.sec"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
+		{RAIN2, SOUND_RAIN_SELECT	, "HEAD_RAIN"	, "HEAD_RANDOM"	, "BODY_RAINUMK3"	, "NULL"	, "3"	, "YUE CHUAN"	, "NAN CHUAN"	, "STORM SWORD"},
+		{SCORPION2	, 95	, "HEAD_MONSTER"	, "HEAD_RANDOM"	, "BODY_MONSTER"	, "NULL"	, "2"	, "HAPKIDO"	, "MOI FAH"	, "MUGAI RYU"},
+		{SUBZERO2	, 99	, "HEAD_SUBZERO"	, "HEAD_SUBZERODA"	, "BODY_SUBZERODA"	, "NULL"	, "4"	, "SHOTOKAN"	, "DRAGON"	, "KORI BLADE"},
+		{ERMAC2	, 81	, "HEAD_ERMAC"	, "HEAD_RANDOM"	, "BODY_ERMACUMK3"	, "NULL"	, "4"	, "HUA CHUAN"	, "CHOY LEE FUT"	, "AXE"},
+		{RAIDEN2	, 94	,	"HEAD_RAIDENMKDA"	, "HEAD_RANDOM"	, "BODY_RAIDENMKDA" , "body_raiden_alt.sec"	, "4"	, "NAN CHUAN"	, "JUJUTSU"	, "STAFF"},
+		{LIU_KANG2	,  90	, "HEAD_GHOST"	, "HEAD_RANDOM"	, "BODY_GHOST" , "body_liukang_alt.sec"	, "5"	, "JUN FAN"	, "PAO CHUI"	, "NUNCHAKU"},
+		{BLAZE2	, SOUND_BLAZE_SELECT	, "HEAD_BLAZE"	, "HEAD_RANDOM"	, "BODY_TORCH"	, "NULL"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
+		{CYRAX2,  SOUND_CYRAX_SELECT	, "HEAD_CYRAX"	,"HEAD_RANDOM"	, "BODY_RANDOM"	, "body_cyrax_alt.sec"	, "3"	, "NINJITSU"	, "SAMBO"	, "PULSEBLADE"},
+
+		{SEKTOR2, SOUND_SEKTOR_SELECT	, "HEAD_SEKTOR"	, "HEAD_RANDOM"	, "BODY_SEKTOR"	, "body_sektor_alt.sec"	, "2"	, "NINJITSU"	, "SHUAI CHIAO"	, "PULSEBLADES"},
+		{MKDA_JAX	, -1, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_JAX"	, "NULL"	, "2"	, ""	, ""	, ""},
+		{MKDA_QUAN_CHI	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_QUAN"	, "NULL"	, "4"	, "TANG SOO DO"	, "ESCRIMA"	, "BROADSWORD"},
+		{NOOB	, 93	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "5"	, "MONKEY"	, ""	, ""},
+		{SMOKE	, 98	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "5"	, "MI TZU"	, ""	, ""},
+		{MKDA_KUNG_LAO	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_KUNGLAO"	, "NULL"	, "2"	, "MANTIS"	, "SHAOLIN FIST"	, "BROADSWORD"},
+		{MKDA_CAGE	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_CAGE"	, "NULL"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
+		{MKDA_SONYA	, -1	, "HEAD_SINDEL_LOCKED"	, "HEAD_RANDOM"	, "BODY_SONYA"	, "NULL"	, "1"	, "KENPO"	, "TAE KWON DO"	, "KALI STICKS"},
+
+		{SHUJINKO_13	, 96	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "5"	, "MANTIS"	, "SHAOLIN FIST"	, "DAN TIEN DAO"},
+		{MKDA_NITARA	, -1	, "HEAD_SINDEL_LOCKED"	, "HEAD_RANDOM"	, "BODY_NITARA"	, "NULL"	, "5"	, "LEOPARD"	, "FU JOW PAI"	, "DRAGON TEETH"},
+		{MKDA_SHANG_TSUNG	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_SHANGTSUNG"	, "NULL"	, "3"	, "SNAKE"	, "MANTIS"	, ""},
+		{MKDA_FROST	, -1	, "HEAD_SINDEL_LOCKED"	, "HEAD_RANDOM"	, "BODY_FROST"	, "NULL"	, "5"	, ""	, ""	, ""},
+		{MKDA_KITANA	, -1	, "HEAD_SINDEL_LOCKED"	, "HEAD_RANDOM"	, "BODY_KITANA"	, "NULL"	, "5"	, "EAGLE CLAW"	, "BA GUA"	, "STEEL FAN"},
+		{MKDA_DRAHMIN	, -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "5"	, ""	, ""	, "IRON CLUB"},
+		{MKDA_KANO	,  -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
+		{MKDA_MOKAP	,  -1	, "HEAD_KOBRA_LOCKED"	, "HEAD_RANDOM"	, "BODY_RANDOM"	, "NULL"	, "3"	, "SHINTO RYU"	, "JEET KUNE DO"	, "NUNCHAKU"},
 };
 
 #endif // !PS2_BUILD
@@ -169,13 +173,13 @@ void swap_select_screen(int refresh)
 
 		if (current_select == Select_UMKD)
 			ent = pSelectTableNew[i];
-		
+
 #ifndef PS2_BUILD
 		if (current_select == Select_NPC)
 			ent = pSelectTableNPC[i];
 #endif // !PS2_BUILD
 
-		*(int*)(sel + 0) = ent.characterID;
+		* (int*)(sel + 0) = ent.characterID;
 		*(int*)(sel + 4) = ent.soundID;
 		*(int*)(sel + 8) = (int)&ent.headName[0];
 		*(int*)(sel + 12) = (int)&ent.headLockedName[0];
@@ -268,7 +272,7 @@ void process_mkdhook()
 		//{
 		//	restore_select_screen();
 		//}
-	
+
 	}
 
 	if (get_game_state() == STATE_GAME)
@@ -277,7 +281,7 @@ void process_mkdhook()
 	}
 
 #ifndef PS2_BUILD
- 	if (get_game_state() == STATE_GAME)
+	if (get_game_state() == STATE_GAME)
 	{
 		Menu_Process();
 	}

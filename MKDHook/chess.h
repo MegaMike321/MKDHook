@@ -3,8 +3,8 @@
 #include "build_config.h"
 #include "toc.h"
 
-#define CHESS_FILES 54
-#define CHESS_PIECES 43
+#define CHESS_FILES 64
+#define CHESS_PIECES 53
 
 
 extern struct mk_file_entry chess_entry_table[CHESS_FILES];

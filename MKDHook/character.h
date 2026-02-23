@@ -2,7 +2,7 @@
 #include "toc.h"
 #include "build_config.h"
 
-#define CHARACTER_TIMERS 33
+#define CHARACTER_TIMERS 39
 
 enum characters
 {
@@ -75,11 +75,20 @@ enum characters
 	TREMOR,
 	CYRAX,
 	REIKO,
+	// Extra Skins
 	RAIN2,
 	SCORPION2,
 	SUBZERO2,
 	ERMAC2,
 	RAIDEN2,
+	SUBZERO3,
+	LIU_KANG2,
+	SUBZERO4,
+	LIU_KANG3,
+	RAIDEN3,
+	BLAZE2,
+	CYRAX2,
+	SEKTOR2,
 	TOTAL_CHARACTERS
 };
 
