@@ -261,6 +261,21 @@
     <ClCompile Include="characters\raiden.c">
       <Filter>source\characters\mkd</Filter>
     </ClCompile>
+    <ClCompile Include="stages\courtyard.c">
+      <Filter>source\stages</Filter>
+    </ClCompile>
+    <ClCompile Include="stages\portal.c">
+      <Filter>source\stages</Filter>
+    </ClCompile>
+    <ClCompile Include="stages\skytemple.c">
+      <Filter>source\stages</Filter>
+    </ClCompile>
+    <ClCompile Include="characters\mileena.c">
+      <Filter>source\characters\mkd</Filter>
+    </ClCompile>
+    <ClCompile Include="characters\tanya.c">
+      <Filter>source\characters\mkd</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ps2mem.h">
@@ -504,6 +519,21 @@
       <Filter>source\misc</Filter>
     </ClInclude>
     <ClInclude Include="characters\raiden.h">
+      <Filter>source\characters\mkd</Filter>
+    </ClInclude>
+    <ClInclude Include="stages\courtyard.h">
+      <Filter>source\stages</Filter>
+    </ClInclude>
+    <ClInclude Include="stages\portal.h">
+      <Filter>source\stages</Filter>
+    </ClInclude>
+    <ClInclude Include="stages\skytemple.h">
+      <Filter>source\stages</Filter>
+    </ClInclude>
+    <ClInclude Include="characters\mileena.h">
+      <Filter>source\characters\mkd</Filter>
+    </ClInclude>
+    <ClInclude Include="characters\tanya.h">
       <Filter>source\characters\mkd</Filter>
     </ClInclude>
   </ItemGroup>

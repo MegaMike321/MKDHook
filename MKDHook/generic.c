@@ -304,7 +304,7 @@ int death_traps_lock()
 	{
 		if (p1->characterID == BLAZE || p2->characterID == BLAZE)
 		{
-			if (bgnd == BGS_SKYTEMPLE || bgnd == BGS_LOWERMINES || bgnd == BGS_DARKPRISON || bgnd == BGS_FORTRESS)
+			if (bgnd == BGS_SKYTEMPLE || bgnd == BGS_LOWERMINES || bgnd == BGS_DARKPRISON || bgnd == BGS_FORTRESS || bgnd == BGS_SKYTEMPLE2)
 				return 0;
 		}
 	}

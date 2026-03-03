@@ -59,6 +59,7 @@
     <ClCompile Include="characters\kitana.c" />
     <ClCompile Include="characters\kunglao.c" />
     <ClCompile Include="characters\liukang.c" />
+    <ClCompile Include="characters\mileena.c" />
     <ClCompile Include="characters\mkda_blaze.c" />
     <ClCompile Include="characters\mkda_kano.c" />
     <ClCompile Include="characters\mkda_kung_lao.c" />
@@ -78,6 +79,7 @@
     <ClCompile Include="characters\smoke.c" />
     <ClCompile Include="characters\sonya.c" />
     <ClCompile Include="characters\subzero.c" />
+    <ClCompile Include="characters\tanya.c" />
     <ClCompile Include="characters\tremor.c" />
     <ClCompile Include="chess.c" />
     <ClCompile Include="generic.c" />
@@ -115,8 +117,11 @@
     <ClCompile Include="sound_bank.c" />
     <ClCompile Include="stage.c" />
     <ClCompile Include="stages\acidbath.c" />
+    <ClCompile Include="stages\courtyard.c" />
     <ClCompile Include="stages\darkprison.c" />
     <ClCompile Include="stages\katakombs.c" />
+    <ClCompile Include="stages\portal.c" />
+    <ClCompile Include="stages\skytemple.c" />
     <ClCompile Include="stages\teststage.c" />
     <ClCompile Include="voice.c" />
   </ItemGroup>
@@ -138,6 +143,7 @@
     <ClInclude Include="characters\kitana.h" />
     <ClInclude Include="characters\kunglao.h" />
     <ClInclude Include="characters\liukang.h" />
+    <ClInclude Include="characters\mileena.h" />
     <ClInclude Include="characters\mkda_blaze.h" />
     <ClInclude Include="characters\mkda_kano.h" />
     <ClInclude Include="characters\mkda_kung_lao.h" />
@@ -157,6 +163,7 @@
     <ClInclude Include="characters\smoke.h" />
     <ClInclude Include="characters\sonya.h" />
     <ClInclude Include="characters\subzero.h" />
+    <ClInclude Include="characters\tanya.h" />
     <ClInclude Include="characters\tremor.h" />
     <ClInclude Include="chess.h" />
     <ClInclude Include="generic.h" />
@@ -196,8 +203,11 @@
     <ClInclude Include="sound_bank.h" />
     <ClInclude Include="stage.h" />
     <ClInclude Include="stages\acidbath.h" />
+    <ClInclude Include="stages\courtyard.h" />
     <ClInclude Include="stages\darkprison.h" />
     <ClInclude Include="stages\katakombs.h" />
+    <ClInclude Include="stages\portal.h" />
+    <ClInclude Include="stages\skytemple.h" />
     <ClInclude Include="stages\teststage.h" />
     <ClInclude Include="toc.h" />
     <ClInclude Include="types.h" />

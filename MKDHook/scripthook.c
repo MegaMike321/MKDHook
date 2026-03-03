@@ -188,7 +188,7 @@ void _reset_fake_bone_matcher()
 		*(int*)(args + 20),
 		*(int*)(args + 24),
 		*(float*)(args + 28)
-		);
+	);
 }
 
 void _camera_setup_simple_rotation()
@@ -315,14 +315,14 @@ void _set_active_add_ang_z()
 }
 
 void _set_active_projectile_ball_effect()
-{	
+{
 	int args = *(int*)(CURRENT_ARGS);
 	float startHeight = *(float*)(args + 4);
 	float gravityValue = *(float*)(args + 8);
 
 	int proj_obj = 0;
 	int proj_pdata = *(int*)0x5D724C;
-	
+
 	if (proj_pdata)
 	{
 		proj_obj = *(int*)(proj_pdata + 40);
@@ -333,7 +333,7 @@ void _set_active_projectile_ball_effect()
 		}
 		else
 			proj_obj = 0LL;
-	
+
 		if (proj_obj)
 		{
 			CVector curVelocity = *(CVector*)(proj_obj + 176);
@@ -478,15 +478,15 @@ void _sindel_screamer_sound_react()
 
 void psp_reset_fake_bone_matcher(int obj, int a2, int a3, int a4, int a5, int a6, float flt)
 {
-	int v7; 
-	int v8; 
-	int v10; 
-	bool v11; 
-	int v12; 
-	int v13; 
-	int v14; 
-	int v15; 
-	int v16; 
+	int v7;
+	int v8;
+	int v10;
+	bool v11;
+	int v12;
+	int v13;
+	int v14;
+	int v15;
+	int v16;
 
 	v7 = *(int*)(obj + 16);
 	v8 = 0;
@@ -610,7 +610,7 @@ int cache_loaded_aux_weapon(int a1, int obj)
 	// seems its impossible to access aux weapon object in mkd ps2
 	// so aux objs are cached for both players
 	// and then swapped for jax during FX call to make gun work
-	
+
 
 	int wep = load_weapon(a1, obj);
 
@@ -620,11 +620,11 @@ int cache_loaded_aux_weapon(int a1, int obj)
 	player_info* info = (player_info*)PLAYER1_INFO;
 	if (id == 1)
 		info = (player_info*)PLAYER2_INFO;
-	if (chrID == JAX || chrID == KUNG_LAO || chrID == CYRAX)
+	if (chrID == JAX || chrID == KUNG_LAO || chrID == CYRAX || chrID == CYRAX2)
 	{
 		cached_aux_weapon[id] = wep;
 	}
-		
+
 	return wep;
 }
 
